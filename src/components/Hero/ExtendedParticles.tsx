@@ -1,98 +1,149 @@
-import React from "react";
 import Particles from "@tsparticles/react";
-import { defaultWhite, primaryColor, secondaryColor } from "../../../theme";
+import React from "react";
+import { primary, secondary } from "../../../theme";
 
 function ExtendedParticles() {
   return (
     <Particles
       id="tsparticles"
-      // particlesLoaded={async () => console.log("loaded")}
+      url=""
       options={{
-        background: {
-          color: defaultWhite,
-        },
-        style: {
-          top: "3rem",
-          height: "calc(100vh - 3rem)",
-        },
+        autoPlay: true,
+        detectRetina: true,
+        duration: 0,
         fpsLimit: 120,
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: ["repulse"],
-            },
-          },
-          modes: {
-            grab: {
-              distance: 200,
-            },
-          },
-        },
-
         particles: {
-          collisions: {
-            enable: true,
+          bounce: {
+            horizontal: {
+              value: 1,
+            },
+            vertical: {
+              value: 1,
+            },
           },
+
           color: {
-            value: [primaryColor, secondaryColor],
+            value: [primary, secondary],
+            animation: {
+              h: {
+                count: 0,
+                enable: false,
+                speed: 1,
+                decay: 0,
+                delay: 0,
+                sync: true,
+                offset: 0,
+              },
+              s: {
+                count: 0,
+                enable: false,
+                speed: 1,
+                decay: 0,
+                delay: 0,
+                sync: true,
+                offset: 0,
+              },
+              l: {
+                count: 0,
+                enable: false,
+                speed: 1,
+                decay: 0,
+                delay: 0,
+                sync: true,
+                offset: 0,
+              },
+            },
           },
-          links: {
-            color: primaryColor,
-            distance: 200,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
+
           move: {
+            decay: 0,
+            distance: 0,
             direction: "none",
+            drift: 0,
             enable: true,
+
             outModes: {
               default: "bounce",
+              bottom: "bounce",
+              left: "bounce",
+              right: "bounce",
+              top: "bounce",
             },
-            random: false,
+            random: true,
             speed: 1,
-            straight: false,
           },
           number: {
             density: {
-              enable: true,
+              enable: false,
+              width: 100,
+              height: 1,
             },
-            value: 100,
+            limit: {
+              mode: "delete",
+              value: 0,
+            },
+            value: 50,
           },
           opacity: {
-            animation: {
-              enable: true,
-              speed: 1,
-              startValue: "random",
-            },
             value: {
-              min: 0.1,
-              max: 0.8,
+              min: 0.05,
+              max: 0.4,
+            },
+            animation: {
+              count: 0,
+              enable: true,
+              speed: 2,
+              decay: 0,
+              delay: 0,
+              sync: false,
+              mode: "auto",
+              startValue: "random",
+              destroy: "none",
             },
           },
+          reduceDuplicates: false,
+
           shape: {
-            type: ["circle"],
-
-            /* options: {
-
-                  image: [
-                    {
-                      src: eur,
-                    },
-                  ],
-                }, */
+            close: true,
+            fill: false,
+            options: {},
+            type: "circle",
           },
           size: {
-            value: { min: 1, max: 4 },
-            animation: {
-              enable: true,
-              mode: "random",
-              speed: 4,
+            value: 10,
+          },
+
+          links: {
+            blink: false,
+            color: {
+              value: "random",
             },
+            consent: false,
+            distance: 40,
+            enable: true,
+            frequency: 1,
+            opacity: 1,
+            width: 2,
           },
         },
-        detectRetina: true,
+
+        polygon: {
+          enable: true,
+          inline: {
+            arrangement: "equidistant",
+          },
+          move: {
+            radius: 5,
+            type: "path",
+          },
+          scale: 1,
+          type: "inline",
+          url: "/google.svg",
+          position: {
+            x: 3,
+            y: 30,
+          },
+        },
       }}
     />
   );

@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { loadSlim } from "@tsparticles/slim";
-import ExtendedParticles from "./ExtendedParticles";
 import { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+// import { loadSlim } from "@tsparticles/slim";
+import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+import { useEffect, useState } from "react";
+import ExtendedParticles from "./ExtendedParticles";
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
@@ -19,16 +19,12 @@ export default function ParticlesBg() {
       // starting from v2 you can add only the features you need reducing the bundle size
       // await loadAll(engine);
       // await loadFull(engine);
-      await loadSlim(engine);
+      await loadAll(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
-  return (
-    <div className="h-screen w-screen absolute">
-      {init && <ExtendedParticles />}
-    </div>
-  );
+  return <div>{init && <ExtendedParticles />}</div>;
 }
