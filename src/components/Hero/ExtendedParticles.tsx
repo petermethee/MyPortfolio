@@ -1,5 +1,6 @@
 import Particles from "@tsparticles/react";
 import React from "react";
+import { primary, secondary } from "../../../theme";
 
 function ExtendedParticles() {
   return (
@@ -24,22 +25,22 @@ function ExtendedParticles() {
           detectsOn: "window",
           events: {
             onClick: {
-              enable: false,
+              enable: true,
               mode: "push",
             },
             onDiv: {
               selectors: [],
-              enable: false,
+              enable: true,
               mode: [],
               type: "circle",
             },
             onHover: {
               enable: true,
-              mode: "bubble",
+              mode: ["bubble", "connect"],
               parallax: {
-                enable: false,
-                force: 2,
-                smooth: 10,
+                enable: true,
+                force: 100,
+                smooth: 5,
               },
             },
             resize: {
@@ -71,18 +72,18 @@ function ExtendedParticles() {
               opacity: 8,
               size: 6,
               divs: {
-                distance: 200,
+                distance: 400,
                 duration: 0.4,
                 mix: false,
                 selectors: [],
               },
             },
             connect: {
-              distance: 10,
+              distance: 100,
               links: {
                 opacity: 0.5,
               },
-              radius: 60,
+              radius: 0,
             },
             grab: {
               distance: 400,
@@ -125,7 +126,7 @@ function ExtendedParticles() {
               area: {
                 gradient: {
                   start: {
-                    value: "#ffffff",
+                    value: "#791313",
                   },
                   stop: {
                     value: "#000000",
@@ -152,65 +153,11 @@ function ExtendedParticles() {
               value: 1,
             },
           },
-          collisions: {
-            absorb: {
-              speed: 2,
-            },
-            bounce: {
-              horizontal: {
-                value: 1,
-              },
-              vertical: {
-                value: 1,
-              },
-            },
-            enable: false,
-            maxSpeed: 50,
-            mode: "bounce",
-            overlap: {
-              enable: true,
-              retries: 0,
-            },
-          },
+
           color: {
-            value: "#ffffff",
-            animation: {
-              h: {
-                count: 0,
-                enable: false,
-                speed: 1,
-                decay: 0,
-                delay: 0,
-                sync: true,
-                offset: 0,
-              },
-              s: {
-                count: 0,
-                enable: false,
-                speed: 1,
-                decay: 0,
-                delay: 0,
-                sync: true,
-                offset: 0,
-              },
-              l: {
-                count: 0,
-                enable: false,
-                speed: 1,
-                decay: 0,
-                delay: 0,
-                sync: true,
-                offset: 0,
-              },
-            },
+            value: [primary, secondary],
           },
-          effect: {
-            close: true,
-            fill: true,
-            options: {},
-            type: [],
-          },
-          groups: {},
+
           move: {
             angle: {
               offset: 0,
@@ -230,25 +177,7 @@ function ExtendedParticles() {
               mode: "percent",
               radius: 0,
             },
-            decay: 0,
-            distance: {},
-            direction: "none",
-            drift: 0,
             enable: true,
-            gravity: {
-              acceleration: 9.81,
-              enable: false,
-              inverse: false,
-              maxSpeed: 50,
-            },
-            path: {
-              clamp: true,
-              delay: {
-                value: 0,
-              },
-              enable: false,
-              options: {},
-            },
             outModes: {
               default: "bounce",
               bottom: "bounce",
@@ -259,30 +188,9 @@ function ExtendedParticles() {
             random: false,
             size: false,
             speed: 1,
-            spin: {
-              acceleration: 0,
-              enable: false,
-            },
-            straight: false,
-            trail: {
-              enable: false,
-              length: 10,
-              fill: {},
-            },
-            vibrate: false,
-            warp: false,
           },
           number: {
-            density: {
-              enable: false,
-              width: 1920,
-              height: 1080,
-            },
-            limit: {
-              mode: "delete",
-              value: 0,
-            },
-            value: 50,
+            value: 300,
           },
           opacity: {
             value: {
@@ -320,18 +228,7 @@ function ExtendedParticles() {
             type: "circle",
           },
           size: {
-            value: 1,
-            animation: {
-              count: 0,
-              enable: false,
-              speed: 5,
-              decay: 0,
-              delay: 0,
-              sync: false,
-              mode: "auto",
-              startValue: "random",
-              destroy: "none",
-            },
+            value: 2,
           },
           stroke: {
             width: 0,
@@ -342,115 +239,15 @@ function ExtendedParticles() {
             sizeRate: 1,
             velocityRate: 1,
           },
-          destroy: {
-            bounds: {},
-            mode: "none",
-            split: {
-              count: 1,
-              factor: {
-                value: 3,
-              },
-              rate: {
-                value: {
-                  min: 4,
-                  max: 9,
-                },
-              },
-              sizeOffset: true,
-              particles: {},
-            },
-          },
-          roll: {
-            darken: {
-              enable: false,
-              value: 0,
-            },
-            enable: false,
-            enlighten: {
-              enable: false,
-              value: 0,
-            },
-            mode: "vertical",
-            speed: 25,
-          },
-          tilt: {
-            value: 0,
-            animation: {
-              enable: false,
-              speed: 0,
-              decay: 0,
-              sync: false,
-            },
-            direction: "clockwise",
-            enable: false,
-          },
-          twinkle: {
-            lines: {
-              enable: false,
-              frequency: 0.05,
-              opacity: 1,
-            },
-            particles: {
-              enable: false,
-              frequency: 0.05,
-              opacity: 1,
-            },
-          },
-          wobble: {
-            distance: 5,
-            enable: false,
-            speed: {
-              angle: 50,
-              move: 10,
-            },
-          },
-          life: {
-            count: 0,
-            delay: {
-              value: 0,
-              sync: false,
-            },
-            duration: {
-              value: 0,
-              sync: false,
-            },
-          },
-          rotate: {
-            value: 0,
-            animation: {
-              enable: false,
-              speed: 0,
-              decay: 0,
-              sync: false,
-            },
-            direction: "clockwise",
-            path: false,
-          },
-          orbit: {
-            animation: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: false,
-            },
-            enable: false,
-            opacity: 1,
-            rotation: {
-              value: 45,
-            },
-            width: 1,
-          },
           links: {
             blink: false,
             color: {
-              value: "#ffffff",
+              value: ["#c9c9c9ff"],
             },
             consent: false,
             distance: 40,
             enable: true,
-            frequency: 1,
+            frequency: 0.7,
             opacity: 0.4,
             shadow: {
               blur: 5,
@@ -461,18 +258,10 @@ function ExtendedParticles() {
             },
             triangles: {
               enable: false,
-              frequency: 1,
+              frequency: 0.5,
             },
             width: 1,
             warp: false,
-          },
-          repulse: {
-            value: 0,
-            enabled: false,
-            distance: 1,
-            duration: 1,
-            factor: 1,
-            speed: 1,
           },
         },
         pauseOnBlur: true,
@@ -509,12 +298,12 @@ function ExtendedParticles() {
             radius: 10,
             type: "path",
           },
-          scale: 3,
-          type: "inline",
+          scale: 0.8,
+          type: "inside",
           url: "/google.svg",
           position: {
-            x: 50,
-            y: 50,
+            x: 0,
+            y: 100,
           },
         },
       }}

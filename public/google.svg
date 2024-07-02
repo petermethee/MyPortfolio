@@ -1,1 +1,5 @@
-<svg id="eVqN10tpBis1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><path d="M0,30C0,13.43146,13.43146,0,30,0s30,13.43146,30,30-13.43146,30-30,30-30-13.43146-30-30Z" transform="matrix(4.845868 0 0 4.845868 4.62396 4.62396)" fill="none" stroke="#060606"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+  fill="#5f6368">
+  <path
+    d="M320-242 80-482l242-242 43 43-199 199 197 197-43 43Zm318 2-43-43 199-199-197-197 43-43 240 240-242 242Z" />
+</svg>
