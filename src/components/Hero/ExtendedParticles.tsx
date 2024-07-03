@@ -1,6 +1,6 @@
 import Particles from "@tsparticles/react";
 import React from "react";
-import { primary, secondary } from "../../../theme";
+import { accent } from "../../../theme";
 
 function ExtendedParticles() {
   return (
@@ -38,7 +38,7 @@ function ExtendedParticles() {
               enable: true,
               mode: ["bubble", "connect"],
               parallax: {
-                enable: true,
+                enable: false,
                 force: 100,
                 smooth: 5,
               },
@@ -66,17 +66,11 @@ function ExtendedParticles() {
               distance: 200,
             },
             bubble: {
-              distance: 40,
+              distance: 100,
               duration: 2,
-              mix: false,
+              mix: true,
               opacity: 8,
               size: 6,
-              divs: {
-                distance: 400,
-                duration: 0.4,
-                mix: false,
-                selectors: [],
-              },
             },
             connect: {
               distance: 100,
@@ -155,7 +149,7 @@ function ExtendedParticles() {
           },
 
           color: {
-            value: [primary, secondary],
+            value: [accent],
           },
 
           move: {
