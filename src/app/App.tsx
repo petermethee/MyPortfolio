@@ -13,14 +13,6 @@ export default function App({ children }: { children: React.ReactNode }) {
     <div className="h-full overflow-y-auto">
       <Navbar />
       {children}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      testes
     </div>
   );
 }
