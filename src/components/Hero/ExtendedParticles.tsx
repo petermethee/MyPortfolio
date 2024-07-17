@@ -184,7 +184,7 @@ function ExtendedParticles() {
             speed: 1,
           },
           number: {
-            value: 300,
+            value: 100,
           },
           opacity: {
             value: {

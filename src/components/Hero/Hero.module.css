@@ -1,6 +1,7 @@
 .bgGrid {
   background-image: url("./dot.svg");
-  mask-image: radial-gradient(#000000bd, #00000013 30%);
+  /* mask-image: radial-gradient(#000000bd, #00000013 30%); */
+  /* background-size: 20px; */
 }
 
 .techCircle {
