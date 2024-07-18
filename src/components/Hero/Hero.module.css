@@ -1,11 +1,34 @@
 .bgGrid {
   background-image: url("./dot.svg");
-  /* mask-image: radial-gradient(#000000bd, #00000013 30%); */
-  /* background-size: 20px; */
+  mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
+  filter: brightness(0.8);
 }
 
-.techCircle {
-  background-image: url("../../assets/tech_circle.svg");
-  height: 100px;
-  background-size: cover;
+.me {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  aspect-ratio: 1;
+  clip-path: circle(30% at 50% 30%);
+  background-color: #343434b9;
+}
+
+.image {
+  margin: auto;
+  width: 60%;
+}
+
+.light {
+  width: 20%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(#c9c5c0, #00000000);
+  filter: blur(42px);
+  mix-blend-mode: plus-lighter;
 }

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import me from "../../assets/me.jpg";
+import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({
@@ -17,18 +17,20 @@ export default function Hero() {
     setMousePosition({ x, y });
   };
   return (
-    <div onMouseMove={handleMouseMove}>
-      <div
-        className={`h-screen w-full  relative flex items-center justify-center ${styles.bgGrid}`}
-      >
-        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div> */}
+    <>
+      <div onMouseMove={handleMouseMove}>
+        <div
+          className={`h-screen w-full  relative flex items-center justify-center ${styles.bgGrid}`}
+        />
+        <div className={styles.light} />
+
+        {/* <div className={styles.techCircle} /> */}
+
+        {/* {<ParticlesBg />} */}
       </div>
-
-      {/* <div className={styles.techCircle} /> */}
-
-      {/* {<ParticlesBg />} */}
-      <Image alt="" src={me} />
-      {/* <img src={"../../assets/me.jpg"} className="w-[20%]" /> */}
-    </div>
+      <div className={styles.me}>
+        <Image className={styles.image} alt="" src={me} />
+      </div>
+    </>
   );
 }
