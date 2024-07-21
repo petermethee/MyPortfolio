@@ -4,9 +4,9 @@
 }
 
 .me,
-.center {
+.common {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20%;
@@ -18,7 +18,7 @@
   mix-blend-mode: normal;
 }
 
-.center {
+.common {
   mix-blend-mode: plus-lighter;
 }
 
@@ -48,7 +48,7 @@
 }
 .glow {
   position: absolute;
-  inset: 0;
+  inset: -2px;
   filter: blur(20px);
   background: conic-gradient(
     #ffa957 0deg,

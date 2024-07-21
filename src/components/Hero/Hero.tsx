@@ -12,7 +12,7 @@ export default function Hero() {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.x + rect.width / 2;
     const y = e.clientY - rect.y + rect.height / 2;
-    console.log("tag", x, y);
+    // console.log("tag", x, y);
 
     setMousePosition({ x, y });
   };
@@ -27,7 +27,7 @@ export default function Hero() {
           style={{ left: mousePosition.x, top: mousePosition.y }}
         /> */}
 
-        <div className={styles.center}>
+        <div className={styles.common}>
           <div className={styles.glow} />
           <div className={styles.lights} />
         </div>
