@@ -1,34 +1,85 @@
 .bgGrid {
   background-image: url("./dot.svg");
   mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
-  filter: brightness(0.8);
+}
+
+.me,
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 
 .me {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  aspect-ratio: 1;
-  clip-path: circle(30% at 50% 30%);
-  background-color: #343434b9;
+  mix-blend-mode: normal;
 }
 
-.image {
-  margin: auto;
-  width: 60%;
-}
-
-.light {
-  width: 20%;
-  aspect-ratio: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(#c9c5c0, #00000000);
-  filter: blur(42px);
+.center {
   mix-blend-mode: plus-lighter;
+}
+
+.lights {
+  position: absolute;
+  overflow: hidden;
+  inset: -2px;
+  border-radius: 50%;
+}
+.lights::before {
+  position: absolute;
+  content: "";
+  inset: -30%;
+  background: conic-gradient(
+    #ffa957 0deg,
+    #d06523 5deg,
+    #a9603c,
+    transparent 90deg,
+    transparent 180deg,
+    #4bfbff 180deg,
+    #1f77e6 185deg,
+    #19223d,
+    transparent 270deg
+  );
+  z-index: -1;
+  animation: rotate 3s infinite linear both;
+}
+.glow {
+  position: absolute;
+  inset: 0;
+  filter: blur(20px);
+  background: conic-gradient(
+    #ffa957 0deg,
+    #d06523,
+    #3e1a08,
+    transparent 90deg,
+    transparent 180deg,
+    #4bfbff 180deg,
+    #1f77e6,
+    #19223d,
+    transparent 270deg
+  );
+  animation: rotate 3s infinite linear both;
+  border-radius: 50%;
+}
+
+.me {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  position: absolute;
+  aspect-ratio: 1;
+}
+
+@keyframes rotate {
+  0% {
+    /* filter: brightness(0.8); */
+    transform: rotate(0deg);
+  }
+  100% {
+    /* filter: brightness(1.1); */
+    transform: rotate(-360deg);
+  }
 }

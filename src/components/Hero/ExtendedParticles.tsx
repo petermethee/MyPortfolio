@@ -239,7 +239,7 @@ function ExtendedParticles() {
               value: ["#c9c9c9ff"],
             },
             consent: false,
-            distance: 40,
+            distance: 80,
             enable: true,
             frequency: 0.7,
             opacity: 0.4,
@@ -297,7 +297,7 @@ function ExtendedParticles() {
           url: "/google.svg",
           position: {
             x: 0,
-            y: 100,
+            y: 50,
           },
         },
       }}
