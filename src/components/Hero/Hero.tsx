@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import me from "../../assets/me.jpg";
+import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({
@@ -17,22 +17,30 @@ export default function Hero() {
     setMousePosition({ x, y });
   };
   return (
-    <>
-      <div onMouseMove={handleMouseMove}>
-        <div
-          className={`h-screen w-full  relative flex items-center justify-center ${styles.bgGrid}`}
-        />
-        {/* <div
+    <div
+      onMouseMove={handleMouseMove}
+      className="relative h-full flex justify-center "
+    >
+      <div className={styles.bgGrid} />
+      {/* <div
           className={styles.light}
           style={{ left: mousePosition.x, top: mousePosition.y }}
         /> */}
 
-        <div className={styles.common}>
+      <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap">
+        <div className={styles.meContainer}>
           <div className={styles.glow} />
           <div className={styles.lights} />
+          <Image className={styles.me} alt="" src={me} />
         </div>
+
+        <h1 className="text-3xl sm:text-5xl lg:text-7xl uppercase">
+          Jérôme Procureur
+        </h1>
+        <h2 className="text-sm lg:text-2xl  uppercase">
+          Ingénieur logiciel - Fullstack & Web APP développeur
+        </h2>
       </div>
-      <Image className={styles.me} alt="" src={me} />
-    </>
+    </div>
   );
 }

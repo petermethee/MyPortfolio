@@ -1,25 +1,28 @@
 .bgGrid {
+  position: absolute;
   background-image: url("./dot.svg");
   mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
+  height: 100%;
+  width: 100%;
 }
 
-.me,
-.common {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20%;
+.meContainer {
+  position: relative;
+  width: 25%;
+  max-width: 300px;
+  min-width: 150px;
   aspect-ratio: 1;
   border-radius: 50%;
+  margin: 9rem 0rem 2rem 0rem;
 }
 
-.me {
-  mix-blend-mode: normal;
-}
-
-.common {
-  mix-blend-mode: plus-lighter;
+.meContainer::after {
+  content: "";
+  position: absolute;
+  backdrop-filter: blur(70px);
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .lights {
@@ -33,9 +36,9 @@
   content: "";
   inset: -30%;
   background: conic-gradient(
-    #ffa957 0deg,
+    #fbbe84 0deg,
     #d06523 5deg,
-    #a9603c,
+    #451c07,
     transparent 90deg,
     transparent 180deg,
     #4bfbff 180deg,
@@ -44,7 +47,8 @@
     transparent 270deg
   );
   z-index: -1;
-  animation: rotate 3s infinite linear both;
+  animation: rotate 5s infinite linear;
+  mask-image: radial-gradient(circle, #00000000 35%, #000 43%);
 }
 .glow {
   position: absolute;
@@ -61,7 +65,7 @@
     #19223d,
     transparent 270deg
   );
-  animation: rotate 3s infinite linear both;
+  animation: rotate 5s infinite linear;
   border-radius: 50%;
 }
 
@@ -71,6 +75,7 @@
   border-radius: 50%;
   position: absolute;
   aspect-ratio: 1;
+  z-index: 1;
 }
 
 @keyframes rotate {

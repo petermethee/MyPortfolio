@@ -12,3 +12,23 @@ body {
   position: fixed;
   width: 100%;
 }
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1280px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  * {
+    font-size: 12px;
+  }
+}
