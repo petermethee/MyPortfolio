@@ -19,10 +19,18 @@
 .meContainer::after {
   content: "";
   position: absolute;
-  backdrop-filter: blur(70px);
+  backdrop-filter: blur(10px);
   inset: 0;
   border-radius: 50%;
-  overflow: hidden;
+}
+
+.me {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  position: absolute;
+  aspect-ratio: 1;
+  z-index: 1;
 }
 
 .lights {
@@ -69,22 +77,64 @@
   border-radius: 50%;
 }
 
-.me {
-  object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
+@property --pos {
+  syntax: "<length-percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
+
+.electronic,
+.electronic2 {
   position: absolute;
-  aspect-ratio: 1;
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 350%;
+  aspect-ratio: 3557/765;
+}
+
+.electronic {
+  background: linear-gradient(
+    to right,
+    #4bfbff,
+    #4bfbff,
+    #1f77e6,
+    #19223d,
+    transparent 15%,
+    transparent 85%,
+    #3e1a08,
+    #d06523,
+    #ffa957,
+    #ffa957
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--pos) 100%;
+  mask-image: url("./electronic.svg");
+  mask-size: 100% 100%;
+  animation: expand 3s infinite ease-out;
+}
+.electronic2 {
+  background: url("./electronic.svg");
+  background-size: contain;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+@keyframes expand {
+  0% {
+    --pos: 20%;
+  }
+  100% {
+    --pos: 140%;
+  }
 }
 
 @keyframes rotate {
   0% {
-    /* filter: brightness(0.8); */
     transform: rotate(0deg);
   }
   100% {
-    /* filter: brightness(1.1); */
     transform: rotate(-360deg);
   }
 }

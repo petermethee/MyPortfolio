@@ -27,11 +27,13 @@ export default function Hero() {
           style={{ left: mousePosition.x, top: mousePosition.y }}
         /> */}
 
-      <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap">
+      <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
           <div className={styles.glow} />
           <div className={styles.lights} />
           <Image className={styles.me} alt="" src={me} />
+          <div className={styles.electronic} />
+          <div className={styles.electronic2} />
         </div>
 
         <h1 className="text-3xl sm:text-5xl lg:text-7xl uppercase">
