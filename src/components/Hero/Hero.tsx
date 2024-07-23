@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import bg from "../../assets/bg.png";
 import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
@@ -10,25 +11,33 @@ export default function Hero() {
   });
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.x + rect.width / 2;
-    const y = e.clientY - rect.y + rect.height / 2;
-    // console.log("tag", x, y);
-
+    const x = e.clientX - rect.x - rect.width / 2;
+    const y = e.clientY - rect.y - rect.height / 2;
     setMousePosition({ x, y });
   };
+
   return (
     <div
       onMouseMove={handleMouseMove}
       className="relative h-full flex justify-center "
     >
       <div className={styles.bgGrid} />
+
       {/* <div
           className={styles.light}
           style={{ left: mousePosition.x, top: mousePosition.y }}
-        /> */}
+          /> */}
 
       <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
+          <Image
+            className={styles.bg}
+            alt=""
+            src={bg}
+            style={{
+              maskPosition: `${mousePosition.x}px ${mousePosition.y}px`,
+            }}
+          />
           <div className={styles.glow} />
           <div className={styles.lights} />
           <Image className={styles.me} alt="" src={me} />

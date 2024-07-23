@@ -2,8 +2,7 @@
   position: absolute;
   background-image: url("./dot.svg");
   mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
-  height: 100%;
-  width: 100%;
+  inset: 0;
 }
 
 .meContainer {
@@ -19,7 +18,7 @@
 .meContainer::after {
   content: "";
   position: absolute;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(70px);
   inset: 0;
   border-radius: 50%;
 }
@@ -44,36 +43,37 @@
   content: "";
   inset: -30%;
   background: conic-gradient(
-    #fbbe84 0deg,
-    #d06523 5deg,
     #451c07,
-    transparent 90deg,
-    transparent 180deg,
-    #4bfbff 180deg,
-    #1f77e6 185deg,
+    #d06523,
+    #fbbe84,
+    #d06523,
+    #451c07,
     #19223d,
-    transparent 270deg
+    #1f77e6,
+    #4bfbff,
+    #1f77e6,
+    #19223d
   );
   z-index: -1;
-  animation: rotate 5s infinite linear;
   mask-image: radial-gradient(circle, #00000000 35%, #000 43%);
 }
+
 .glow {
   position: absolute;
   inset: -2px;
-  filter: blur(20px);
   background: conic-gradient(
-    #ffa957 0deg,
+    #451c07,
     #d06523,
-    #3e1a08,
-    transparent 90deg,
-    transparent 180deg,
-    #4bfbff 180deg,
-    #1f77e6,
+    #fbbe84,
+    #d06523,
+    #451c07,
     #19223d,
-    transparent 270deg
+    #1f77e6,
+    #4bfbff,
+    #1f77e6,
+    #19223d
   );
-  animation: rotate 5s infinite linear;
+  animation: glow 3s infinite ease-in-out 0.5s;
   border-radius: 50%;
 }
 
@@ -114,11 +114,22 @@
   mask-size: 100% 100%;
   animation: expand 3s infinite ease-out;
 }
+
 .electronic2 {
   background: url("./electronic.svg");
   background-size: contain;
   opacity: 0.2;
   z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  /* mask-image: radial-gradient(circle, #00000045, #00000000 30%); */
+  /* object-fit: cover; */
+  width: 350%;
+  max-width: none;
+  inset: 0;
+  mask-repeat: no-repeat;
 }
 
 @keyframes expand {
@@ -136,5 +147,22 @@
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: blur(30px);
+    opacity: 1;
+  }
+
+  50% {
+    filter: blur(10px);
+    opacity: 0.3;
+  }
+
+  100% {
+    filter: blur(30px);
+    opacity: 1;
   }
 }
