@@ -84,7 +84,8 @@
 }
 
 .electronic,
-.electronic2 {
+.electronic2,
+.bg {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -124,11 +125,10 @@
 
 .bg {
   position: absolute;
-  /* mask-image: radial-gradient(circle, #00000045, #00000000 30%); */
+  mask-image: radial-gradient(circle, #00000093, #00000033, #00000000 20%);
   /* object-fit: cover; */
-  width: 350%;
+  width: 400%;
   max-width: none;
-  inset: 0;
   mask-repeat: no-repeat;
 }
 
