@@ -119,8 +119,8 @@
 .electronic2 {
   background: url("./electronic.svg");
   background-size: contain;
-  opacity: 0.2;
   z-index: -1;
+  mask-image: radial-gradient(circle, #00000000 20%, #000);
 }
 
 .bg {
@@ -130,6 +130,8 @@
   width: 400%;
   max-width: none;
   mask-repeat: no-repeat;
+  aspect-ratio: 3744/772;
+  z-index: 2;
 }
 
 @keyframes expand {

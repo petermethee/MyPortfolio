@@ -17,10 +17,7 @@ export default function Hero() {
   };
 
   return (
-    <div
-      onMouseMove={handleMouseMove}
-      className="relative h-full flex justify-center "
-    >
+    <div className="relative h-full flex justify-center ">
       <div className={styles.bgGrid} />
 
       {/* <div
@@ -31,6 +28,7 @@ export default function Hero() {
       <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
           <Image
+            onMouseMove={handleMouseMove}
             className={styles.bg}
             alt=""
             src={bg}
