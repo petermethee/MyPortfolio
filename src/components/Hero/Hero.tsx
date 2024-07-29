@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
-import bg from "../../assets/bg.png";
 import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({
+  /*   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
@@ -14,7 +12,7 @@ export default function Hero() {
     const x = e.clientX - rect.x - rect.width / 2;
     const y = e.clientY - rect.y - rect.height / 2;
     setMousePosition({ x, y });
-  };
+  }; */
 
   return (
     <div className="relative h-full flex justify-center ">
@@ -27,15 +25,6 @@ export default function Hero() {
 
       <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
-          <Image
-            onMouseMove={handleMouseMove}
-            className={styles.bg}
-            alt=""
-            src={bg}
-            style={{
-              maskPosition: `${mousePosition.x}px ${mousePosition.y}px`,
-            }}
-          />
           <div className={styles.glow} />
           <div className={styles.lights} />
           <Image className={styles.me} alt="" src={me} />
@@ -46,7 +35,7 @@ export default function Hero() {
         <h1 className="text-3xl sm:text-5xl lg:text-7xl uppercase">
           Jérôme Procureur
         </h1>
-        <h2 className="text-sm lg:text-2xl  uppercase">
+        <h2 className="text-sm lg:text-2xl">
           Ingénieur logiciel - Fullstack & Web APP développeur
         </h2>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
+import { Merienda } from "next/font/google";
 import App from "./App";
 import "./globals.css";
 export const metadata: Metadata = {
@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   description: "My Portfolio",
 };
 
-const font = Josefin_Sans({
+/* const font = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+}); */
+const meriendaFont = Merienda({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${meriendaFont.className} text-gray-300 `}>
         <App>{children}</App>
       </body>
     </html>

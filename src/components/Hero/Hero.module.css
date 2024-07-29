@@ -3,6 +3,7 @@
   background-image: url("./dot.svg");
   mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
   inset: 0;
+  z-index: -1;
 }
 
 .meContainer {
