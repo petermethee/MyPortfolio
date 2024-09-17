@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
+import { secondary } from "../../../theme";
 import AmazingCardEffect from "../AmazingCardEffect/AmazingCardEffect";
 import styles from "./Cards.module.css";
 export default function Cards({
   title,
   description,
   icon,
-  color,
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
-  color: string;
 }) {
   const [pointerPosition, setPointerPosition] = useState<{
     x: number;
@@ -53,13 +52,13 @@ export default function Cards({
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          boxShadow: `0px 0px 25px -5px rgb(from ${color} r g b / 50%) `,
+          boxShadow: `0px 0px 25px -5px rgb(from ${secondary} r g b / 50%) `,
         }}
       >
         <div
           className={styles.glare}
           style={{
-            background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, rgb(from ${color} r g b / 30%), #96969640 50%, #24242464 110%)`,
+            background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #ffffff5e, #96969640 40%, #24242464 110%)`,
             opacity: pointerPosition.fromCenter * 0.7,
           }}
         />

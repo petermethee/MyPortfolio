@@ -4,7 +4,7 @@ import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
   return (
-    <div className="relative flex justify-center ">
+    <div className="relative flex justify-center max-w-screen-2xl mx-auto ">
       <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
           <div className={styles.glow} />
