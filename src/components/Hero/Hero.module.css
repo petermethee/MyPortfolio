@@ -1,11 +1,3 @@
-.bgGrid {
-  position: absolute;
-  background-image: url("./dot.svg");
-  mask-image: radial-gradient(circle, #000000bd, #00000013 80%);
-  inset: 0;
-  z-index: -1;
-}
-
 .meContainer {
   position: relative;
   width: 25%;
@@ -46,7 +38,7 @@
   background: conic-gradient(
     #451c07,
     #d06523,
-    #fbbe84,
+    #dcbd92,
     #d06523,
     #451c07,
     #19223d,
@@ -65,7 +57,7 @@
   background: conic-gradient(
     #451c07,
     #d06523,
-    #fbbe84,
+    #dcbd92,
     #d06523,
     #451c07,
     #19223d,
@@ -112,13 +104,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: var(--pos) 100%;
-  mask-image: url("./electronic.svg");
+  mask-image: url("../../assets/electronic.svg");
   mask-size: 100% 100%;
   animation: expand 3s infinite ease-out;
 }
 
 .electronic2 {
-  background: url("./electronic.svg");
+  background: url("../../assets/electronic.svg");
   background-size: contain;
   z-index: -1;
   mask-image: radial-gradient(circle, #00000000 20%, #000);

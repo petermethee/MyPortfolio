@@ -3,26 +3,8 @@ import Image from "next/image";
 import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
-  /*   const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.x - rect.width / 2;
-    const y = e.clientY - rect.y - rect.height / 2;
-    setMousePosition({ x, y });
-  }; */
-
   return (
-    <div className="relative h-full flex justify-center ">
-      <div className={styles.bgGrid} />
-
-      {/* <div
-          className={styles.light}
-          style={{ left: mousePosition.x, top: mousePosition.y }}
-          /> */}
-
+    <div className="relative flex justify-center ">
       <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
         <div className={styles.meContainer}>
           <div className={styles.glow} />
