@@ -31,7 +31,7 @@ export default function Qualities() {
     },
   ];
   return (
-    <div className=" mt-16 bg-background/30 backdrop-blur-[2px] p-8 border-y border-text/60 w-screen">
+    <div className=" my-16 bg-background/30 backdrop-blur-[2px] p-8 border-y border-text/60 w-screen">
       <div className="flex flex-col md:flex-row justify-evenly items-center gap-10 max-w-screen-2xl mx-auto">
         {qualities.map((quality) => (
           <div

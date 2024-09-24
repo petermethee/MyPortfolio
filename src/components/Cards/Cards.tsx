@@ -1,16 +1,21 @@
 "use client";
-import { useState } from "react";
-import { secondary } from "../../../theme";
+import React, { useState } from "react";
 import AmazingCardEffect from "../AmazingCardEffect/AmazingCardEffect";
 import styles from "./Cards.module.css";
 export default function Cards({
   title,
-  description,
+  children,
   icon,
+  className,
+  glare = true,
+  shine = true,
 }: {
   title: string;
-  description: string;
+  children: React.ReactNode;
   icon: React.ReactNode;
+  className?: string;
+  glare?: boolean;
+  shine?: boolean;
 }) {
   const [pointerPosition, setPointerPosition] = useState<{
     x: number;
@@ -48,34 +53,50 @@ export default function Cards({
   return (
     <AmazingCardEffect>
       <div
-        className="p-4 rounded-xl border-text/50 border-[1px] bg-background/80 overflow-hidden relative max-w-sm h-full"
+        className={"absolute inset-[-2px] rounded-xl"}
+        style={{
+          background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #f3f3f3, #96969600 50%)`,
+          opacity: pointerPosition.fromCenter > 0.1 ? 1 : 0,
+        }}
+      />
+
+      <div
+        className={"relative" + " " + className}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          boxShadow: `0px 0px 25px -5px rgb(from ${secondary} r g b / 50%) `,
+          // boxShadow: `0px 0px 25px -5px rgb(from ${secondary} r g b / 50%) `,
+          transformStyle: "preserve-3d",
         }}
       >
-        <div
-          className={styles.glare}
-          style={{
-            background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #ffffff5e, #96969640 40%, #24242464 110%)`,
-            opacity: pointerPosition.fromCenter * 0.7,
-          }}
-        />
-        <div
-          className={styles.shinning}
-          style={{
-            backgroundPositionX: `${
-              Math.sqrt(pointerPosition.x ** 2 + pointerPosition.y ** 2) * 1.5
-            }px`,
-            opacity: pointerPosition.fromCenter,
-          }}
-        />
+        <div className="overflow-hidden absolute inset-0 rounded-xl">
+          {glare && (
+            <div
+              className={styles.glare}
+              style={{
+                background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #ffffff5e, #96969640 40%, #24242464 110%)`,
+                opacity: pointerPosition.fromCenter * 0.7,
+              }}
+            />
+          )}
+          {shine && (
+            <div
+              className={styles.shinning}
+              style={{
+                backgroundPositionX: `${
+                  Math.sqrt(pointerPosition.x ** 2 + pointerPosition.y ** 2) *
+                  1.5
+                }px`,
+                opacity: pointerPosition.fromCenter,
+              }}
+            />
+          )}
+        </div>
 
-        <div className="text-2xl text-secondary pb-3 flex gap-3 items-center">
+        <div className="text-xl text-secondary pb-3 flex gap-3 items-center">
           {icon} {title}
         </div>
-        <div>{description}</div>
+        {children}
       </div>
     </AmazingCardEffect>
   );

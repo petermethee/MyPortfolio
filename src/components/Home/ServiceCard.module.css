@@ -1,0 +1,13 @@
+.group:hover .content {
+  transform: translateZ(40px);
+}
+
+.group {
+  box-shadow: 0 0 16px 1px #000000ca;
+}
+
+.item {
+  box-shadow: 0 0 10px 0px #0000006a;
+  background-color: #ffffff13;
+  /* background: linear-gradient(90deg, #3687bd, #a16740); */
+}
