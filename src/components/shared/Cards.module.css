@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   transition: 200ms;
+  z-index: -1;
 }
 
 .shinning {
@@ -28,4 +29,5 @@
   background-size: 150% 150%;
   mix-blend-mode: color-dodge;
   filter: brightness(0.6) contrast(1);
+  z-index: -1;
 }

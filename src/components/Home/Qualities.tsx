@@ -1,4 +1,4 @@
-import { font } from "@/app/layout";
+import { standardFont } from "@/app/layout";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 import Diversity1RoundedIcon from "@mui/icons-material/Diversity1Rounded";
 import HandshakeRoundedIcon from "@mui/icons-material/HandshakeRounded";
@@ -47,7 +47,7 @@ export default function Qualities() {
             <span className="uppercase">{quality.title}</span>
             <span
               className="text-center text-sm"
-              style={{ fontFamily: font.style.fontFamily }}
+              style={{ fontFamily: standardFont.style.fontFamily }}
             >
               {quality.description}
             </span>

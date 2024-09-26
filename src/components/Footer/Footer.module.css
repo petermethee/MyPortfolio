@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(#00000000, #00000056);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 6px 0 #00000077;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copyright span {
+  font-size: 0.8rem;
+}
+
+.logo {
+  width: 40px;
+}
+
+.socialLinks {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 30rem;
+}

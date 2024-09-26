@@ -1,0 +1,20 @@
+.title {
+  align-items: flex-end;
+  display: flex;
+  gap: 10px;
+}
+
+.txt {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+}
+.scaleEffect {
+  transition: 200ms;
+}
+.scaleEffect:hover {
+  transform: scale(1.05);
+}
+
+.dashed {
+  border: 1px dashed #9596968d;
+}

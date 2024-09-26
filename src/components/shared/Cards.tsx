@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import AmazingCardEffect from "../AmazingCardEffect/AmazingCardEffect";
+import AmazingCardEffect from "./AmazingCardEffect";
 import styles from "./Cards.module.css";
 export default function Cards({
   title,
@@ -53,7 +53,7 @@ export default function Cards({
   return (
     <AmazingCardEffect>
       <div
-        className={"absolute inset-[-2px] rounded-xl"}
+        className={"absolute inset-[-1px] rounded-xl"}
         style={{
           background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #f3f3f3, #96969600 50%)`,
           opacity: pointerPosition.fromCenter > 0.1 ? 1 : 0,

@@ -2,7 +2,7 @@ import { Josefin_Sans, Merienda } from "next/font/google";
 import App from "./App";
 import "./globals.css";
 
-export const font = Josefin_Sans({
+export const standardFont = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
