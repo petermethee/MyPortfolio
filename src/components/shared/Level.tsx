@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export default function Level({ rank }: { rank: number }) {
   return (
-    <div className=" flex gap-1 bg-primary/50 py-1 px-2 rounded-3xl childTranslateZ">
+    <div className=" flex gap-1 bg-primary py-1 px-2 rounded-3xl childTranslateZ">
       {Levels.map((level) => (
         <Tooltip title={level.description}>
           <div

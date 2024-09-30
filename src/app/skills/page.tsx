@@ -78,7 +78,7 @@ export default function SkillPage() {
         {skills.map((skill) => (
           <Cards
             key={skill.title}
-            className="p-4 bg-[#354050] rounded-xl w-[20rem] group shadow-xl gap-3 flex flex-col groupTranslateZ"
+            className="p-4 bg-primary_dark rounded-xl w-[20rem] group shadow-xl gap-3 flex flex-col groupTranslateZ"
             icon={skill.icon}
             title={skill.title}
             glare
