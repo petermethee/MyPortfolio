@@ -7,8 +7,10 @@ export default function Cards({
   children,
   icon,
   className,
-  glare = true,
-  shine = true,
+  glare,
+  shine,
+  thresholdX = 60,
+  thresholdY = 40,
 }: {
   title: string;
   children: React.ReactNode;
@@ -16,6 +18,8 @@ export default function Cards({
   className?: string;
   glare?: boolean;
   shine?: boolean;
+  thresholdY?: number;
+  thresholdX?: number;
 }) {
   const [pointerPosition, setPointerPosition] = useState<{
     x: number;
@@ -51,7 +55,7 @@ export default function Cards({
   };
 
   return (
-    <AmazingCardEffect>
+    <AmazingCardEffect thresholdX={thresholdX} thresholdY={thresholdY}>
       <div
         className={"absolute inset-[-1px] rounded-xl"}
         style={{
@@ -61,7 +65,7 @@ export default function Cards({
       />
 
       <div
-        className={"relative" + " " + className}
+        className={"relative " + " " + className}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{

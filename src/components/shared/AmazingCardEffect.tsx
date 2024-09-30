@@ -2,15 +2,16 @@
 import React, { CSSProperties, useState } from "react";
 import styles from "./AmazingCardEffect.module.css";
 
-const thresholdY = 40;
-const thresholdX = 60;
-
 export default function AmazingCardEffect({
   children,
   buttons,
+  thresholdY = 40,
+  thresholdX = 60,
 }: {
   children: React.ReactNode;
   buttons?: React.ReactNode;
+  thresholdY?: number;
+  thresholdX?: number;
 }) {
   const [style, setStyle] = useState<CSSProperties>({
     transform: "rotateX(0deg) rotateY(0deg)",

@@ -4,10 +4,6 @@
   gap: 10px;
 }
 
-.txt {
-  font-size: 1.1rem;
-  color: #bdbdbd;
-}
 .scaleEffect {
   transition: 200ms;
 }

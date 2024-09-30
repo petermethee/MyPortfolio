@@ -1,27 +1,9 @@
 import Cards from "@/components/shared/Cards";
 import DescriptionZone from "@/components/shared/DescriptionZone";
+import Level from "@/components/shared/Level";
 import DesktopWindowsRoundedIcon from "@mui/icons-material/DesktopWindowsRounded";
 import HttpRoundedIcon from "@mui/icons-material/HttpRounded";
-/* 
-Framework
 
-
-
-React 4/5 
-
-Angular 3/5
-
-NectJS 3/5
-
-
-
-Autre
-
-Electron 4/5
-
-NodeJS 4/5  
-
- */
 const skills = [
   {
     title: "Frontend",
@@ -93,18 +75,48 @@ export default function SkillPage() {
   return (
     <div className=" max-w-screen-lg mx-auto px-10 py-24">
       <div className="flex flex-wrap justify-evenly">
-        <Cards
-          className="p-4 rounded-xl  bg-background w-[20rem] group shadow-xl"
-          icon={<DesktopWindowsRoundedIcon />}
-          title="Frontend"
-        >
-          <DescriptionZone
-            icon={<HttpRoundedIcon />}
-            title={"Languages"}
-            text={<div>Typescript 4/5 Javascript 4/5 HTML 4/5 CSS 4/5</div>}
-            // className={styles.descriptionZone}
-          />
-        </Cards>
+        {skills.map((skill) => (
+          <Cards
+            key={skill.title}
+            className="p-4 bg-[#354050] rounded-xl w-[20rem] group shadow-xl gap-3 flex flex-col groupTranslateZ"
+            icon={skill.icon}
+            title={skill.title}
+            glare
+            thresholdX={10}
+            thresholdY={20}
+          >
+            {skill.items.map((item) => (
+              <DescriptionZone
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                className="bg-[#0000004b] w-full childTranslateZ"
+                text={
+                  <div
+                    className="flex flex-col gap-2 w-full"
+                    style={{
+                      transformStyle: "preserve-3d",
+                    }}
+                  >
+                    {item.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="flex justify-between"
+                        style={{
+                          transformStyle: "preserve-3d",
+                        }}
+                      >
+                        <span>{skill.name}</span>
+                        <Level rank={skill.level} />
+                      </div>
+                    ))}
+                  </div>
+                }
+                dashed
+              />
+            ))}
+          </Cards>
+        ))}
       </div>
     </div>
   );

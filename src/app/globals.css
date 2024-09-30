@@ -32,3 +32,12 @@ h2 {
     font-size: 12px;
   }
 }
+
+.childTranslateZ {
+  transition: 200ms;
+  box-shadow: 0 0 10px 0 #0000008c;
+}
+.groupTranslateZ:hover .childTranslateZ {
+  transform: translateZ(30px);
+  box-shadow: 0 0 20px 0 #0000008c;
+}

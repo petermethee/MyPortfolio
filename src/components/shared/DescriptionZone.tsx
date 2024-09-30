@@ -21,18 +21,20 @@ export default function DescriptionZone({
   return (
     <div
       className={clsx({
-        [`flex flex-col gap-4 rounded-md p-2 items-start bg-background/50 ${className}  ${standardFont.className}`]:
+        [`flex flex-col gap-4 rounded-md p-2 items-start z-50 ${className} ${standardFont.className}`]:
           true,
         [styles.dashed]: dashed,
         [styles.scaleEffect]: scaleEffect,
       })}
+      style={{
+        transformStyle: "preserve-3d",
+      }}
     >
       <div className={`${styles.title} text-sm`}>
         {icon}
         {title}
       </div>
-
-      {text && <div className={styles.txt}>{text}</div>}
+      {text}
     </div>
   );
 }
