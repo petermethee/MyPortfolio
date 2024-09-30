@@ -13,7 +13,7 @@ export const Levels = [
   },
   {
     rank: 4,
-    description: "A l'aise",
+    description: "Maîtrise",
   },
   {
     rank: 5,
