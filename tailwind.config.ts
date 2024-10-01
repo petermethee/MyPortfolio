@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import {
   accent,
+  accent_secondary,
   background,
   primary,
   primary_dark,
@@ -23,6 +24,7 @@ const config: Config = {
         background: background,
         accent: accent,
         primary_dark: primary_dark,
+        accent_secondary: accent_secondary,
       },
     },
   },

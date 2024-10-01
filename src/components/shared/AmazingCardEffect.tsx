@@ -7,11 +7,13 @@ export default function AmazingCardEffect({
   buttons,
   thresholdY = 40,
   thresholdX = 60,
+  fullWidth,
 }: {
   children: React.ReactNode;
   buttons?: React.ReactNode;
   thresholdY?: number;
   thresholdX?: number;
+  fullWidth?: boolean;
 }) {
   const [style, setStyle] = useState<CSSProperties>({
     transform: "rotateX(0deg) rotateY(0deg)",
@@ -44,7 +46,12 @@ export default function AmazingCardEffect({
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        width: fullWidth ? "100%" : "auto",
+      }}
+    >
       <div
         className={styles.childContainer}
         onMouseLeave={handleMouseLeave}

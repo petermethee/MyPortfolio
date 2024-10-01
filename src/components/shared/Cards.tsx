@@ -11,15 +11,17 @@ export default function Cards({
   shine,
   thresholdX = 60,
   thresholdY = 40,
+  fullWidth,
 }: {
-  title: string;
-  children: React.ReactNode;
-  icon: React.ReactNode;
+  title?: string;
+  children?: React.ReactNode;
+  icon?: React.ReactNode;
   className?: string;
   glare?: boolean;
   shine?: boolean;
   thresholdY?: number;
   thresholdX?: number;
+  fullWidth?: boolean;
 }) {
   const [pointerPosition, setPointerPosition] = useState<{
     x: number;
@@ -55,7 +57,11 @@ export default function Cards({
   };
 
   return (
-    <AmazingCardEffect thresholdX={thresholdX} thresholdY={thresholdY}>
+    <AmazingCardEffect
+      fullWidth={fullWidth}
+      thresholdX={thresholdX}
+      thresholdY={thresholdY}
+    >
       <div
         className={"absolute inset-[-1px] rounded-xl"}
         style={{
@@ -97,9 +103,11 @@ export default function Cards({
           )}
         </div>
 
-        <div className="text-xl text-secondary pb-3 flex gap-3 items-center">
-          {icon} {title}
-        </div>
+        {title && (
+          <div className="text-xl text-secondary pb-3 flex gap-3 items-center">
+            {icon} {title}
+          </div>
+        )}
         {children}
       </div>
     </AmazingCardEffect>

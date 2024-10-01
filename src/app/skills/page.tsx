@@ -1,3 +1,4 @@
+import Career from "@/components/Skills/Career";
 import Skills from "@/components/Skills/Skills";
 
 export default function SkillPage() {
@@ -7,6 +8,10 @@ export default function SkillPage() {
         Ce que je sais faire
       </div>
       <Skills />
+      <br />
+
+      <div className="text-3xl font-bold text-center my-8">Mon parcours</div>
+      <Career />
     </div>
   );
 }
