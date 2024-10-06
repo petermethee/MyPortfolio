@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import AmazingCardEffect from "./AmazingCardEffect";
-import styles from "./Cards.module.css";
-export default function Cards({
+import styles from "./AmazingCard.module.css";
+import ThreeDCardEffect from "./ThreeDCardEffect";
+export default function AmazingCard({
   title,
   children,
   icon,
@@ -57,7 +57,7 @@ export default function Cards({
   };
 
   return (
-    <AmazingCardEffect
+    <ThreeDCardEffect
       fullWidth={fullWidth}
       thresholdX={thresholdX}
       thresholdY={thresholdY}
@@ -65,7 +65,7 @@ export default function Cards({
       <div
         className={"absolute inset-[-1px] rounded-xl"}
         style={{
-          background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #f3f3f3, #96969600 50%)`,
+          background: `radial-gradient(farthest-corner circle at ${pointerPosition.x}px ${pointerPosition.y}px, #f3f3f390, #96969600 50%)`,
           opacity: pointerPosition.fromCenter > 0.1 ? 1 : 0,
         }}
       />
@@ -110,6 +110,6 @@ export default function Cards({
         )}
         {children}
       </div>
-    </AmazingCardEffect>
+    </ThreeDCardEffect>
   );
 }

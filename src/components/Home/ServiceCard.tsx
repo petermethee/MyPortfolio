@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../shared/Cards";
+import AmazingCard from "../shared/AmazingCard";
 import DescriptionZone from "../shared/DescriptionZone";
 import styles from "./ServiceCard.module.css";
 export type TServiceCard = {
@@ -10,7 +10,7 @@ export type TServiceCard = {
 
 export default function ServiceCard({ icon, title, items }: TServiceCard) {
   return (
-    <Cards
+    <AmazingCard
       title={title}
       icon={icon}
       className={`p-4 rounded-xl  w-[20rem] h-full  flex flex-col groupTranslateZ ${styles.card}`}
@@ -28,6 +28,6 @@ export default function ServiceCard({ icon, title, items }: TServiceCard) {
           />
         ))}
       </div>
-    </Cards>
+    </AmazingCard>
   );
 }

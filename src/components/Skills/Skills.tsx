@@ -1,4 +1,4 @@
-import Cards from "@/components/shared/Cards";
+import AmazingCard from "@/components/shared/AmazingCard";
 import DescriptionZone from "@/components/shared/DescriptionZone";
 import Level from "@/components/shared/Level";
 import DesktopWindowsRoundedIcon from "@mui/icons-material/DesktopWindowsRounded";
@@ -190,7 +190,7 @@ export default function Skills() {
   return (
     <div className="flex flex-wrap justify-evenly gap-10">
       {skills.map((skill) => (
-        <Cards
+        <AmazingCard
           key={skill.title}
           className="h-full p-4 bg-primary_dark rounded-xl w-[18rem] group shadow-xl gap-3 flex flex-col groupTranslateZ "
           icon={skill.icon}
@@ -229,7 +229,7 @@ export default function Skills() {
               dashed
             />
           ))}
-        </Cards>
+        </AmazingCard>
       ))}
     </div>
   );

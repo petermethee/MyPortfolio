@@ -44,7 +44,6 @@ export default function Navbar() {
   return (
     <div className="absolute top-0 flex h-20 w-full justify-center bg-background/50 backdrop-blur-sm z-10">
       <div className="flex w-full max-w-screen-lg justify-between  gap-4 items-center px-8">
-        <div>Logo</div>
         {routes.map((route) => (
           <NavItem
             icon={route.icon}

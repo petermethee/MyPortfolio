@@ -1,10 +1,10 @@
 import { standardFont } from "@/app/layout";
-import Cards from "../shared/Cards";
+import AmazingCard from "../shared/AmazingCard";
 import { TCareerEvent } from "./Career";
 import style from "./CareerCard.module.css";
 export default function CareerCard({ event }: { event: TCareerEvent }) {
   return (
-    <Cards
+    <AmazingCard
       className={`bg-background pt-2 px-4 pb-4 rounded-xl w-full ${style.card}  `}
       glare
       fullWidth
@@ -22,6 +22,6 @@ export default function CareerCard({ event }: { event: TCareerEvent }) {
 
         {event.title}
       </div>
-    </Cards>
+    </AmazingCard>
   );
 }

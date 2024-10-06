@@ -1,8 +1,8 @@
 "use client";
 import React, { CSSProperties, useState } from "react";
-import styles from "./AmazingCardEffect.module.css";
+import styles from "./ThreeDCardEffect.module.css";
 
-export default function AmazingCardEffect({
+export default function ThreeDCardEffect({
   children,
   buttons,
   thresholdY = 40,
