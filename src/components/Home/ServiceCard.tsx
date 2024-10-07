@@ -18,7 +18,6 @@ export default function ServiceCard({ icon, title, items }: TServiceCard) {
     >
       <div
         className={`flex flex-col gap-2 justify-evenly flex-1 inset-0 transition-all`}
-        style={{ transformStyle: "preserve-3d" }}
       >
         {items.map((item) => (
           <DescriptionZone

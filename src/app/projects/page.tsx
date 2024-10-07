@@ -113,7 +113,7 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      <div className="flex gap-10 flex-wrap flex-1 justify-center items-center ">
+      <div className="flex gap-x-10 gap-y-20 flex-wrap flex-1 justify-center items-center ">
         {projects.map((project) => (
           <div className="w-full md:w-[40%] min-w-[200px] max-w-[500px] ">
             <ProjectCard key={project.title} project={project} />

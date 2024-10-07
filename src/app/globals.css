@@ -38,6 +38,10 @@ h2 {
   box-shadow: 0 0 10px 0 #0000008c;
 }
 .groupTranslateZ:hover .childTranslateZ {
-  transform: translateZ(30px);
+  transform: translateZ(20px);
   box-shadow: 0 0 20px 0 #0000008c;
+}
+
+.groupTranslateZ * {
+  transform-style: preserve-3d;
 }

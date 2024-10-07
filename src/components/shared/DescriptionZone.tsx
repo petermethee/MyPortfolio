@@ -26,9 +26,6 @@ export default function DescriptionZone({
         [styles.dashed]: dashed,
         [styles.scaleEffect]: scaleEffect,
       })}
-      style={{
-        transformStyle: "preserve-3d",
-      }}
     >
       <div className={`${styles.title} text-sm`}>
         {icon}

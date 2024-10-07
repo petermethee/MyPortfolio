@@ -12,6 +12,7 @@ export default function AmazingCard({
   thresholdX = 60,
   thresholdY = 40,
   fullWidth,
+  buttons,
 }: {
   title?: string;
   children?: React.ReactNode;
@@ -22,6 +23,7 @@ export default function AmazingCard({
   thresholdY?: number;
   thresholdX?: number;
   fullWidth?: boolean;
+  buttons?: React.ReactNode;
 }) {
   const [pointerPosition, setPointerPosition] = useState<{
     x: number;
@@ -61,6 +63,7 @@ export default function AmazingCard({
       fullWidth={fullWidth}
       thresholdX={thresholdX}
       thresholdY={thresholdY}
+      buttons={buttons}
     >
       <div
         className={"absolute inset-[-1px] rounded-xl"}
@@ -75,7 +78,6 @@ export default function AmazingCard({
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
-          // boxShadow: `0px 0px 25px -5px rgb(from ${secondary} r g b / 50%) `,
           transformStyle: "preserve-3d",
         }}
       >

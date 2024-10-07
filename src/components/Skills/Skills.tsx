@@ -206,20 +206,9 @@ export default function Skills() {
               title={item.title}
               className="bg-[#0000004b] w-full childTranslateZ"
               text={
-                <div
-                  className="flex flex-col gap-2 w-full"
-                  style={{
-                    transformStyle: "preserve-3d",
-                  }}
-                >
+                <div className="flex flex-col gap-2 w-full">
                   {item.skills.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex justify-between"
-                      style={{
-                        transformStyle: "preserve-3d",
-                      }}
-                    >
+                    <div key={skill.name} className="flex justify-between">
                       <span>{skill.name}</span>
                       <Level rank={skill.level} />
                     </div>
