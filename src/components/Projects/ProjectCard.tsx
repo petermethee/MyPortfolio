@@ -1,21 +1,9 @@
 import { standardFont } from "@/app/layout";
+import { TProject } from "@/models/TProject";
 import { Button, ButtonBase } from "@mui/material";
 import Image from "next/image";
 import img from "../../assets/portfolio.png";
 import AmazingCard from "../shared/AmazingCard";
-export type TProject = {
-  title: string;
-  description: string;
-  image: string;
-  url?: string;
-  github?: string;
-  technologies: string[];
-  duration: string;
-  date: string;
-  status: "ongoing" | "finished";
-  images: string[];
-  client: string;
-};
 
 export default function ProjectCard({ project }: { project: TProject }) {
   return (
