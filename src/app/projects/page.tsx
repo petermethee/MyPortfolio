@@ -86,17 +86,17 @@ const filters = ["Tous", "Professionnels", "Personnels"];
 const themes = ["Web App", "Vitrine", "Backend", "Mobile"];
 export default function ProjectsPage() {
   return (
-    <div className="flex gap-4 max-w-screen-xl mx-auto px-10 py-24  ">
+    <div className="mx-auto flex max-w-screen-xl gap-4 px-10 py-24">
       <div
-        className="bg-accent_secondary/50  0 backdrop-blur-md rounded-md p-2 w-48 flex flex-col gap-2 sticky top-28 h-fit"
+        className="0 sticky top-28 flex h-fit w-48 flex-col gap-2 rounded-md bg-primary/50 p-2 backdrop-blur-md"
         style={{
-          boxShadow: "0 0 50px -20px var(--accent_secondary)",
+          boxShadow: "0 0 50px -20px var(--primary)",
         }}
       >
         {filters.map((filter) => (
           <div
             key={filter}
-            className={`py-1 px-2 w-full bg-background/15 rounded-sm hover:bg-background/40 transition-all cursor-pointer text-text/80 ${standardFont.className}`}
+            className={`w-full cursor-pointer rounded-sm bg-text/15 px-2 py-1 text-text/80 transition-all hover:bg-text/10 ${standardFont.className}`}
           >
             {filter}
           </div>
@@ -106,16 +106,16 @@ export default function ProjectsPage() {
         {themes.map((theme) => (
           <div
             key={theme}
-            className={`py-1 px-2 w-full bg-background/15 rounded-sm hover:bg-background/40 transition-all cursor-pointer text-text/80 ${standardFont.className}`}
+            className={`w-full cursor-pointer rounded-sm bg-text/15 px-2 py-1 text-text/80 transition-all hover:bg-text/10 ${standardFont.className}`}
           >
             {theme}
           </div>
         ))}
       </div>
 
-      <div className="flex gap-x-10 gap-y-20 flex-wrap flex-1 justify-center items-center ">
+      <div className="flex flex-1 flex-wrap items-center justify-center gap-x-10 gap-y-20">
         {projects.map((project) => (
-          <div className="w-full md:w-[40%] min-w-[200px] max-w-[500px] ">
+          <div className="w-full min-w-[250px] max-w-[500px] lg:w-[40%]">
             <ProjectCard key={project.title} project={project} />
           </div>
         ))}
