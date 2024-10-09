@@ -1,6 +1,7 @@
 "use client";
 import Filters from "@/components/Projects/Filters";
 import ProjectCard from "@/components/Projects/ProjectCard";
+import Wrapper from "@/components/shared/Wrapper";
 import { projects } from "@/data/projects";
 import { ETheme, EWorkspace } from "@/models/EThemes";
 import { useState } from "react";
@@ -9,7 +10,7 @@ export default function ProjectsPage() {
   const [workspace, setWorkspace] = useState(EWorkspace.all);
   const [theme, setTheme] = useState(ETheme.webApp);
   return (
-    <div className="mx-auto flex max-w-screen-xl gap-4 px-10 py-24">
+    <Wrapper flex>
       <Filters
         workspace={workspace}
         theme={theme}
@@ -24,15 +25,15 @@ export default function ProjectsPage() {
                 workspace === EWorkspace.all) &&
               (project.theme === theme || theme === ETheme.all),
           )
-          .map((project, index) => (
+          .map((project) => (
             <div
-              key={index}
+              key={project.id}
               className="w-full min-w-[250px] max-w-[500px] lg:w-[40%]"
             >
               <ProjectCard key={project.title} project={project} />
             </div>
           ))}
       </div>
-    </div>
+    </Wrapper>
   );
 }

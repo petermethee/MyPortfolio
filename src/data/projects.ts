@@ -3,6 +3,7 @@ import { TProject } from "@/models/TProject";
 
 export const projects: TProject[] = [
   {
+    id: 0,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",
@@ -18,6 +19,7 @@ export const projects: TProject[] = [
     workspace: EWorkspace.personal,
   },
   {
+    id: 1,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",
@@ -33,6 +35,7 @@ export const projects: TProject[] = [
     workspace: EWorkspace.personal,
   },
   {
+    id: 2,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",
@@ -48,6 +51,7 @@ export const projects: TProject[] = [
     workspace: EWorkspace.personal,
   },
   {
+    id: 3,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",
@@ -63,6 +67,7 @@ export const projects: TProject[] = [
     workspace: EWorkspace.personal,
   },
   {
+    id: 4,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",
@@ -78,6 +83,7 @@ export const projects: TProject[] = [
     workspace: EWorkspace.personal,
   },
   {
+    id: 5,
     title: "My Portfolio",
     description: "My portfolio site",
     image: "./assets/portfolio.png",

@@ -1,6 +1,7 @@
 import { ETheme, EWorkspace } from "./EThemes";
 
 export type TProject = {
+  id: number;
   title: string;
   description: string;
   image: string;

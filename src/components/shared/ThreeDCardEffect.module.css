@@ -1,7 +1,6 @@
 .container {
   perspective: 1000px;
   transform-style: preserve-3d;
-  height: fit-content;
 }
 
 .childContainer {

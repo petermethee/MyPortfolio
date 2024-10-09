@@ -21,7 +21,7 @@ export default function DescriptionZone({
   return (
     <div
       className={clsx({
-        [`flex flex-col gap-4 rounded-md p-2 items-start z-50 ${className} ${standardFont.className}`]:
+        [`z-50 flex flex-col items-start gap-4 rounded-md p-2 ${className} ${standardFont.className}`]:
           true,
         [styles.dashed]: dashed,
         [styles.scaleEffect]: scaleEffect,

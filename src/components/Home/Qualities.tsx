@@ -1,42 +1,14 @@
 import { standardFont } from "@/app/layout";
-import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
-import Diversity1RoundedIcon from "@mui/icons-material/Diversity1Rounded";
-import HandshakeRoundedIcon from "@mui/icons-material/HandshakeRounded";
+import { qualities } from "@/data/qualities";
 
 export default function Qualities() {
-  const qualities = [
-    {
-      title: "Compétences",
-      description:
-        "Je maîtrise les frameworks et outils essentiels pour réaliser des applications web performantes et sur-mesure.",
-
-      icon: <CodeRoundedIcon fontSize="large" />,
-      color: "#1e5969",
-    },
-    {
-      title: "Confiance",
-      description:
-        "Respect des délais et communication transparente, je m'engage à livrer des projets de qualité en assurant un suivi rigoureux.",
-
-      icon: <HandshakeRoundedIcon fontSize="large" />,
-      color: "#a07a57",
-    },
-    {
-      title: "Esprit d'équipe",
-      description:
-        "Collaboratif, curieux et à l'écoute, je travaille efficacement en équipe et je m'épanouis à échanger mes connaissances avec d'autres passionnés.",
-
-      icon: <Diversity1RoundedIcon fontSize="large" />,
-      color: "#2d8654",
-    },
-  ];
   return (
-    <div className=" my-16 bg-background/30 backdrop-blur-[2px] p-8 border-y border-text/60 w-screen">
-      <div className="flex flex-col md:flex-row justify-evenly items-center gap-10 max-w-screen-2xl mx-auto">
+    <div className="my-16 w-screen border-y border-text/60 bg-background/30 p-8 backdrop-blur-[2px]">
+      <div className="mx-auto flex max-w-screen-2xl flex-col items-center justify-evenly gap-10 md:flex-row">
         {qualities.map((quality) => (
           <div
             key={quality.title}
-            className="flex flex-col items-center max-w-sm gap-4"
+            className="flex max-w-sm flex-col items-center gap-4"
           >
             <div
               className={`rounded-full p-4`}

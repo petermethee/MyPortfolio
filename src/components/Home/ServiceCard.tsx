@@ -13,17 +13,18 @@ export default function ServiceCard({ icon, title, items }: TServiceCard) {
     <AmazingCard
       title={title}
       icon={icon}
-      className={`p-4 rounded-xl  w-[20rem] h-full  flex flex-col groupTranslateZ ${styles.card}`}
+      className={`groupTranslateZ flex h-full w-[20rem] flex-col rounded-xl p-4 ${styles.card}`}
       glare
     >
       <div
-        className={`flex flex-col gap-2 justify-evenly flex-1 inset-0 transition-all`}
+        className={`inset-0 flex flex-1 flex-col justify-evenly gap-2 transition-all`}
       >
-        {items.map((item) => (
+        {items.map((item, index) => (
           <DescriptionZone
+            key={index}
             icon={item.icon}
             title={item.text}
-            className="bg-primary_dark/50 childTranslateZ"
+            className="childTranslateZ bg-primary_dark/50"
           />
         ))}
       </div>

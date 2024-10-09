@@ -2,10 +2,12 @@ import { standardFont } from "@/app/layout";
 import { TProject } from "@/models/TProject";
 import { Button, ButtonBase } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import img from "../../assets/portfolio.png";
 import AmazingCard from "../shared/AmazingCard";
 
 export default function ProjectCard({ project }: { project: TProject }) {
+  const router = useRouter();
   return (
     <AmazingCard
       className="groupTranslateZ group relative aspect-video max-w-xl"
@@ -28,7 +30,10 @@ export default function ProjectCard({ project }: { project: TProject }) {
         </>
       }
     >
-      <ButtonBase className="absolute inset-0 z-10 rounded-xl" />
+      <ButtonBase
+        className="absolute inset-0 z-10 rounded-xl"
+        onClick={() => router.push(`/projects/${project.id}`)}
+      />
       <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl">
         <Image
           alt=""
