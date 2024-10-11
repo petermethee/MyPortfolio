@@ -42,8 +42,8 @@ export default function Navbar() {
   const pathName = usePathname();
 
   return (
-    <div className="absolute top-0 flex h-20 w-full justify-center bg-background/50 backdrop-blur-sm z-10">
-      <div className="flex w-full max-w-screen-lg justify-between  gap-4 items-center px-8">
+    <div className="absolute top-0 z-10 flex h-20 w-full justify-center bg-background/50 backdrop-blur-sm">
+      <div className="flex w-full max-w-screen-lg items-center justify-between gap-4 px-8">
         {routes.map((route) => (
           <NavItem
             icon={route.icon}
@@ -54,6 +54,7 @@ export default function Navbar() {
           />
         ))}
         <Button
+          color="secondary"
           variant="contained"
           size="small"
           sx={{ borderRadius: "50px" }}

@@ -24,7 +24,7 @@ export default function ServiceCard({ icon, title, items }: TServiceCard) {
             key={index}
             icon={item.icon}
             title={item.text}
-            className="childTranslateZ bg-primary_dark/50"
+            className="childTranslateZ bg-primary_dark"
           />
         ))}
       </div>

@@ -4,18 +4,21 @@ import clsx from "clsx";
 
 export default function Level({ rank }: { rank: number }) {
   return (
-    <div className=" flex gap-1 bg-primary py-1 px-2 rounded-3xl childTranslateZ">
-      {Levels.map((level) => (
-        <Tooltip title={level.description}>
+    <Tooltip
+      title={Levels.find((level) => level.rank === rank)?.description}
+      arrow
+    >
+      <div className="childTranslateZ flex gap-1 rounded-3xl bg-primary px-2 py-1">
+        {Levels.map((level) => (
           <div
             className={clsx({
-              "rounded-full w-4 h-4 border-[1px] border-secondary/40 ": true,
+              "h-4 w-4 rounded-full border-[1px] border-secondary/40": true,
               "bg-secondary": level.rank <= rank,
             })}
             key={level.rank}
           />
-        </Tooltip>
-      ))}
-    </div>
+        ))}
+      </div>
+    </Tooltip>
   );
 }

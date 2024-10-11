@@ -5,7 +5,7 @@ import i18n from "@/language/i18n";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { useEffect, useMemo } from "react";
 import { I18nextProvider } from "react-i18next";
-import { cssColors, primary, secondary } from "../../theme";
+import { accent, cssColors, primary } from "../../theme";
 import styles from "./App.module.css";
 import { meriendaFont } from "./layout";
 
@@ -19,7 +19,7 @@ export default function App({ children }: { children: React.ReactNode }) {
           main: primary,
         },
         secondary: {
-          main: secondary,
+          main: accent,
         },
       },
     });

@@ -1,10 +1,10 @@
-import { standardFont } from "@/app/layout";
 import { TProject } from "@/models/TProject";
 import { Button, ButtonBase } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import img from "../../assets/portfolio.png";
 import AmazingCard from "../shared/AmazingCard";
+import TechChip from "./TechChip";
 
 export default function ProjectCard({ project }: { project: TProject }) {
   const router = useRouter();
@@ -44,12 +44,7 @@ export default function ProjectCard({ project }: { project: TProject }) {
       </div>
       <div className="absolute left-0 top-0 flex gap-2 p-1">
         {project.technologies.map((tech) => (
-          <div
-            key={tech}
-            className={`h-full w-full rounded-xl bg-gradient-to-tr from-primary to-accent px-2 pt-[3px] text-[0.7rem] ${standardFont.className} childTranslateZ`}
-          >
-            {tech}
-          </div>
+          <TechChip key={tech} tech={tech} />
         ))}
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-background">
@@ -62,10 +57,10 @@ export default function ProjectCard({ project }: { project: TProject }) {
           {project.title}
         </Button>
         <div className="flex gap-2">
-          <div className="childTranslateZ rounded-2xl bg-secondary px-2 text-[0.65rem]">
+          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.65rem] text-text/80">
             {project.date}
           </div>
-          <div className="childTranslateZ rounded-2xl bg-secondary px-2 text-[0.65rem]">
+          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.65rem] text-text/80">
             {project.duration}
           </div>
         </div>

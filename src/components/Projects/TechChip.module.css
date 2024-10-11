@@ -1,0 +1,19 @@
+.tech {
+  background:
+    linear-gradient(var(--background), var(--background)) padding-box,
+    conic-gradient(
+        from -80deg,
+        var(--background) 25deg,
+        var(--primary_dark) 40deg,
+        var(--primary) 160deg,
+        var(--primary_dark) 180deg,
+
+        var(--background) 205deg,
+        var(--primary_dark) 220deg,
+        var(--primary) 340deg,
+        var(--primary_dark) 360deg
+      )
+      border-box;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}

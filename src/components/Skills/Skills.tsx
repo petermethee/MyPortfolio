@@ -36,7 +36,7 @@ export default function Skills() {
               key={item.title}
               icon={item.icon}
               title={item.title}
-              className="childTranslateZ w-full bg-[#0000004b]"
+              className="childTranslateZ w-full bg-background/50"
               text={
                 <div className="flex w-full flex-col gap-2">
                   {item.skills.map((skill) => (
