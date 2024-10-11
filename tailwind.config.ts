@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
 import {
-  accent,
-  accent_dark,
   background,
   primary,
   primary_dark,
+  primary_light,
+  secondary,
+  secondary_dark,
+  tertiary,
   text,
 } from "./theme";
 
@@ -17,12 +19,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: primary,
-        secondary: accent,
-        text: text,
-        background: background,
-        primary_dark: primary_dark,
-        accent_dark: accent_dark,
+        secondary,
+        primary,
+        text,
+        background,
+        primary_dark,
+        secondary_dark,
+        primary_light,
+        tertiary,
       },
     },
   },

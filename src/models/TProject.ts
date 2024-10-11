@@ -1,10 +1,11 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ETheme, EWorkspace } from "./EThemes";
 
 export type TProject = {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image: StaticImport;
   url?: string;
   github?: string;
   technologies: string[];

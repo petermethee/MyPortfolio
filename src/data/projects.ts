@@ -1,12 +1,13 @@
 import { ETheme, EWorkspace } from "@/models/EThemes";
 import { TProject } from "@/models/TProject";
+import portfolio from "../assets/portfolio.png";
 
 export const projects: TProject[] = [
   {
     id: 0,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
@@ -22,7 +23,7 @@ export const projects: TProject[] = [
     id: 1,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
@@ -38,7 +39,7 @@ export const projects: TProject[] = [
     id: 2,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
@@ -54,7 +55,7 @@ export const projects: TProject[] = [
     id: 3,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
@@ -70,7 +71,7 @@ export const projects: TProject[] = [
     id: 4,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
@@ -86,7 +87,7 @@ export const projects: TProject[] = [
     id: 5,
     title: "My Portfolio",
     description: "My portfolio site",
-    image: "./assets/portfolio.png",
+    image: portfolio,
     url: "",
     github: "",
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],

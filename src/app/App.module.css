@@ -1,7 +1,7 @@
 .bgGrid {
   position: absolute;
   background-image: url("../assets/dot.svg");
-  mask-image: radial-gradient(circle, #00000069, #0000000b 90%);
+  mask-image: radial-gradient(circle, #0000009a, #0000000b 90%);
   inset: 0;
   z-index: -1;
 }

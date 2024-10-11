@@ -1,13 +1,16 @@
 import { TProject } from "@/models/TProject";
 import { Button, ButtonBase } from "@mui/material";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import img from "../../assets/portfolio.png";
 import AmazingCard from "../shared/AmazingCard";
 import TechChip from "./TechChip";
 
-export default function ProjectCard({ project }: { project: TProject }) {
-  const router = useRouter();
+export default function ProjectCard({
+  project,
+  onClick,
+}: {
+  project: TProject;
+  onClick: (id: number) => void;
+}) {
   return (
     <AmazingCard
       className="groupTranslateZ group relative aspect-video max-w-xl"
@@ -32,12 +35,12 @@ export default function ProjectCard({ project }: { project: TProject }) {
     >
       <ButtonBase
         className="absolute inset-0 z-10 rounded-xl"
-        onClick={() => router.push(`/projects/${project.id}`)}
+        onClick={() => onClick(project.id)}
       />
       <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl">
         <Image
           alt=""
-          src={img}
+          src={project.image}
           objectFit="cover"
           className="brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
         />
@@ -53,6 +56,7 @@ export default function ProjectCard({ project }: { project: TProject }) {
           color="secondary"
           size="small"
           className="childTranslateZ"
+          onClick={() => onClick(project.id)}
         >
           {project.title}
         </Button>
