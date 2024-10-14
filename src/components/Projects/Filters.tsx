@@ -1,5 +1,10 @@
 import { standardFont } from "@/app/layout";
-import { ETheme, EWorkspace } from "@/models/EThemes";
+import {
+  ETheme,
+  EWorkspace,
+  ThemeIcons,
+  WorkspaceIcons,
+} from "@/models/EThemes";
 
 export default function Filters({
   theme,
@@ -22,21 +27,23 @@ export default function Filters({
       {Object.values(EWorkspace).map((filter) => (
         <div
           key={filter}
-          className={`w-full cursor-pointer rounded-sm px-2 py-1 transition-all ${standardFont.className} ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-text/25"}`}
+          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${standardFont.className} ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setWorkspace(filter)}
         >
-          {filter}
+          {WorkspaceIcons[filter]}
+          <div className="-mb-1">{filter}</div>
         </div>
       ))}
       <br />
-      <span className="font-bold uppercase text-text/50">Thèmes</span>
+      <span className="font-bold uppercase text-text/80">Thèmes</span>
       {Object.values(ETheme).map((curTheme) => (
         <div
           key={curTheme}
-          className={`w-full cursor-pointer rounded-sm px-2 py-1 transition-all ${standardFont.className} ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-text/25"}`}
+          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${standardFont.className} ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setTheme(curTheme)}
         >
-          {curTheme}
+          {ThemeIcons[curTheme]}
+          <div className="-mb-1">{curTheme}</div>
         </div>
       ))}
     </div>

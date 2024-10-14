@@ -16,7 +16,7 @@ export default function Qualities() {
             >
               {quality.icon}
             </div>
-            <span className="uppercase">{quality.title}</span>
+            <span className="uppercase text-secondary">{quality.title}</span>
             <span
               className="text-center text-sm"
               style={{ fontFamily: standardFont.style.fontFamily }}
