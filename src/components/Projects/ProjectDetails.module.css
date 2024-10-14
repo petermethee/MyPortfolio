@@ -1,0 +1,11 @@
+.table > div {
+  padding: 15px 0rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(from var(--text) r g b/ 0.3);
+  width: 100%;
+}
+.table > div > span:first-child {
+  width: 30%;
+  font-weight: bold;
+}

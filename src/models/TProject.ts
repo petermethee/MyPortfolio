@@ -12,7 +12,7 @@ export type TProject = {
   duration: string;
   date: string;
   status: "ongoing" | "finished";
-  images: string[];
+  images: StaticImport[];
   client: string;
   workspace: EWorkspace;
   theme: ETheme;

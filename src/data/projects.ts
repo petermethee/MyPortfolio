@@ -1,5 +1,6 @@
 import { ETheme, EWorkspace } from "@/models/EThemes";
 import { TProject } from "@/models/TProject";
+import me from "../assets/me.png";
 import portfolio from "../assets/portfolio.png";
 
 export const projects: TProject[] = [
@@ -13,7 +14,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,
@@ -29,7 +30,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,
@@ -45,7 +46,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,
@@ -61,7 +62,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,
@@ -77,7 +78,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,
@@ -93,7 +94,7 @@ export const projects: TProject[] = [
     technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vite"],
     duration: "1 mois",
     date: "2024",
-    images: [],
+    images: [me, portfolio, portfolio, portfolio],
     status: "finished",
     client: "",
     theme: ETheme.webApp,

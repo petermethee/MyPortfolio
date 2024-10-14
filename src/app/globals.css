@@ -45,3 +45,7 @@ h2 {
 .groupTranslateZ * {
   transform-style: preserve-3d;
 }
+
+.slick-list {
+  overflow: visible !important; /* override css from lib */
+}
