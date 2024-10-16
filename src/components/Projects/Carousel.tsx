@@ -11,7 +11,7 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
   const sliderRef = useRef<Slider>(null);
   return (
     <div
-      className="relative mt-10 bg-primary/10 py-8"
+      className="relative mt-2 bg-secondary/10 py-8"
       style={{
         boxShadow:
           "inset 0px -20px 20px -25px #000, inset 0px 20px 20px -25px #000",
@@ -61,7 +61,7 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
             <Image
               src={image}
               alt="image"
-              className="h-full w-full max-w-none cursor-pointer rounded-md object-cover shadow-xl duration-300 hover:scale-110"
+              className="h-full w-full max-w-none cursor-pointer rounded-md bg-background object-cover shadow-xl duration-300 hover:scale-110"
             />
           </div>
         ))}

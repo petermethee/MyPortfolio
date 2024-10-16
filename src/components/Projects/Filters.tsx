@@ -21,7 +21,7 @@ export default function Filters({
     <div
       className="sticky top-0 flex h-fit w-48 flex-col gap-2 rounded-md bg-background p-2"
       style={{
-        boxShadow: "0px 0px 50px -20px var(--primary_light)",
+        boxShadow: "0px 0px 40px -20px var(--primary_light)",
       }}
     >
       {Object.values(EWorkspace).map((filter) => (

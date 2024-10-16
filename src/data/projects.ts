@@ -7,7 +7,8 @@ export const projects: TProject[] = [
   {
     id: 0,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",
@@ -23,7 +24,8 @@ export const projects: TProject[] = [
   {
     id: 1,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",
@@ -39,7 +41,8 @@ export const projects: TProject[] = [
   {
     id: 2,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",
@@ -55,7 +58,8 @@ export const projects: TProject[] = [
   {
     id: 3,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",
@@ -71,7 +75,8 @@ export const projects: TProject[] = [
   {
     id: 4,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",
@@ -87,7 +92,8 @@ export const projects: TProject[] = [
   {
     id: 5,
     title: "My Portfolio",
-    description: "My portfolio site",
+    description:
+      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
     image: portfolio,
     url: "",
     github: "",

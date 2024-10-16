@@ -1,7 +1,7 @@
 "use client";
 import Filters from "@/components/Projects/Filters";
 import ProjectCard from "@/components/Projects/ProjectCard";
-import ProjectDetails from "@/components/Projects/ProjectDetails";
+import ProjectDetails from "@/components/Projects/ProjectModal";
 import Wrapper from "@/components/shared/Wrapper";
 import { projects } from "@/data/projects";
 import { ETheme, EWorkspace } from "@/models/EThemes";
