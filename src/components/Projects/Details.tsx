@@ -1,14 +1,13 @@
-import { meriendaFont, standardFont } from "@/app/layout";
 import { TProject } from "@/models/TProject";
 import styles from "./Details.module.css";
 
 export default function Details({ project }: { project: TProject }) {
   return (
     <div
-      className={`flex flex-1 flex-col gap-4 rounded-md bg-primary_dark/20 p-6 shadow-md ${standardFont.className} ${styles.table}`}
+      className={`font-josefin flex flex-1 flex-col gap-4 rounded-md bg-primary_dark/20 p-6 shadow-md ${styles.table}`}
     >
       <div>
-        <div className={`text-lg text-secondary ${meriendaFont.className}`}>
+        <div className={`font-merienda text-lg text-secondary`}>
           Détails du projet
         </div>
       </div>

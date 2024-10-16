@@ -1,4 +1,3 @@
-import { standardFont } from "@/app/layout";
 import { CheckRounded } from "@mui/icons-material";
 
 export default function StackTech({
@@ -15,9 +14,7 @@ export default function StackTech({
             className="rounded-full bg-primary_dark p-1"
             color="success"
           />
-          <span className={`mt-1 text-sm ${standardFont.className}`}>
-            {technology}
-          </span>
+          <span className={`font-josefin mt-1 text-sm`}>{technology}</span>
         </div>
       ))}
     </div>

@@ -1,4 +1,3 @@
-import { standardFont } from "@/app/layout";
 import {
   ETheme,
   EWorkspace,
@@ -27,7 +26,7 @@ export default function Filters({
       {Object.values(EWorkspace).map((filter) => (
         <div
           key={filter}
-          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${standardFont.className} ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
+          className={`font-josefin flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setWorkspace(filter)}
         >
           {WorkspaceIcons[filter]}
@@ -39,7 +38,7 @@ export default function Filters({
       {Object.values(ETheme).map((curTheme) => (
         <div
           key={curTheme}
-          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${standardFont.className} ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
+          className={`font-josefin flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setTheme(curTheme)}
         >
           {ThemeIcons[curTheme]}

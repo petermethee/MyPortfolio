@@ -18,6 +18,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        merienda: ["var(--merienda-font)"],
+        josefin: ["var(--josefin-font)"],
+      },
       colors: {
         secondary,
         primary,

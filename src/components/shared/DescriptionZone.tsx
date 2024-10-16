@@ -1,4 +1,3 @@
-import { standardFont } from "@/app/layout";
 import { clsx } from "clsx";
 import { ReactNode } from "react";
 import styles from "./DescriptionZone.module.css";
@@ -21,7 +20,7 @@ export default function DescriptionZone({
   return (
     <div
       className={clsx({
-        [`z-50 flex flex-col items-start gap-4 rounded-md p-2 ${className} ${standardFont.className}`]:
+        [`z-50 flex flex-col items-start gap-4 rounded-md p-2 ${className} font-josefin`]:
           true,
         [styles.dashed]: dashed,
         [styles.scaleEffect]: scaleEffect,
