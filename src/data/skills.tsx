@@ -1,6 +1,10 @@
 import { TSkill } from "@/components/Skills/Skills";
+import DataObjectRoundedIcon from "@mui/icons-material/DataObjectRounded";
 import DesktopWindowsRoundedIcon from "@mui/icons-material/DesktopWindowsRounded";
-import HttpRoundedIcon from "@mui/icons-material/HttpRounded";
+import HomeRepairServiceRoundedIcon from "@mui/icons-material/HomeRepairServiceRounded";
+import PhoneAndroidRoundedIcon from "@mui/icons-material/PhoneAndroidRounded";
+import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
+import WorkspacesRoundedIcon from "@mui/icons-material/WorkspacesRounded";
 export const skills: TSkill[] = [
   {
     title: "Frontend",
@@ -8,7 +12,7 @@ export const skills: TSkill[] = [
     items: [
       {
         title: "Languages",
-        icon: <HttpRoundedIcon />,
+        icon: <DataObjectRoundedIcon />,
         skills: [
           {
             name: "Javascript",
@@ -34,7 +38,7 @@ export const skills: TSkill[] = [
       },
       {
         title: "Frameworks",
-        icon: <HttpRoundedIcon />,
+        icon: <DataObjectRoundedIcon />,
         skills: [
           {
             name: "React",
@@ -51,8 +55,8 @@ export const skills: TSkill[] = [
         ],
       },
       {
-        title: "Autre",
-        icon: <HttpRoundedIcon />,
+        title: "Autres",
+        icon: <WorkspacesRoundedIcon />,
         skills: [
           {
             name: "Electron",
@@ -68,11 +72,11 @@ export const skills: TSkill[] = [
   },
   {
     title: "Backend",
-    icon: <DesktopWindowsRoundedIcon />,
+    icon: <StorageRoundedIcon />,
     items: [
       {
         title: "Languages",
-        icon: <HttpRoundedIcon />,
+        icon: <DataObjectRoundedIcon />,
         skills: [
           {
             name: "Python",
@@ -94,12 +98,16 @@ export const skills: TSkill[] = [
             name: "Golang",
             level: 3,
           },
+          {
+            name: "GRPC",
+            level: 3,
+          },
         ],
       },
 
       {
-        title: "Design Pattern",
-        icon: <HttpRoundedIcon />,
+        title: "Autres",
+        icon: <WorkspacesRoundedIcon />,
         skills: [
           {
             name: "API Rest",
@@ -113,10 +121,6 @@ export const skills: TSkill[] = [
             name: "SQLite",
             level: 4,
           },
-          {
-            name: "GRPC protocol",
-            level: 3,
-          },
         ],
       },
     ],
@@ -124,11 +128,11 @@ export const skills: TSkill[] = [
 
   {
     title: "Autres",
-    icon: <DesktopWindowsRoundedIcon />,
+    icon: <WorkspacesRoundedIcon />,
     items: [
       {
         title: "Mobile",
-        icon: <HttpRoundedIcon />,
+        icon: <PhoneAndroidRoundedIcon />,
         skills: [
           {
             name: "Android Studio",
@@ -143,7 +147,7 @@ export const skills: TSkill[] = [
 
       {
         title: "Outils",
-        icon: <HttpRoundedIcon />,
+        icon: <HomeRepairServiceRoundedIcon />,
         skills: [
           {
             name: "Docker",
