@@ -21,16 +21,8 @@ h2 {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1280px) {
-  * {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  * {
-    font-size: 0.75rem;
-  }
+* {
+  font-size: clamp(12px, 1.5vw, 1rem);
 }
 
 .childTranslateZ {

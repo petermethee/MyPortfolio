@@ -34,7 +34,7 @@ export default function App({ children }: { children: React.ReactNode }) {
       <div className="h-full overflow-y-auto overflow-x-hidden py-28">
         <div className={styles.bgGrid} />
         <Navbar />
-        <div>{children}</div>
+        {children}
         <Footer />
       </div>
     </ThemeProvider>

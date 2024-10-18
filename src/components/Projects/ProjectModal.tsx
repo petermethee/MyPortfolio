@@ -1,5 +1,4 @@
 import { projects } from "@/data/projects";
-import { ThemeIcons, WorkspaceIcons } from "@/models/EThemes";
 import { Fade, Modal } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -23,7 +22,7 @@ export default function ProjectModal({
   return (
     <Modal open={projectId !== null} onClose={onClose}>
       <Fade in={projectId !== null}>
-        <div className="absolute left-1/2 top-1/2 h-[80%] w-[80%] max-w-screen-xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-background">
+        <div className="absolute left-1/2 top-1/2 h-[80%] w-[90%] max-w-screen-xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-background">
           {project && (
             <>
               <div className="relative flex h-1/4 w-full items-center justify-center overflow-hidden shadow-xl">
@@ -39,15 +38,6 @@ export default function ProjectModal({
                 </div>
               </div>
               <div className="h-3/4 overflow-y-auto">
-                <div className="flex w-full justify-between px-8 py-4">
-                  <span className="flex items-center gap-2">
-                    {WorkspaceIcons[project.workspace]}
-                    {project.workspace}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    {ThemeIcons[project.theme]} {project.theme}
-                  </span>
-                </div>
                 <div className="mx-8 mt-5 flex flex-col-reverse gap-8 md:flex-row">
                   <Details project={project} />
                   <StackTech technologies={project.technologies} />

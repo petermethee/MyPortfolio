@@ -3,4 +3,5 @@ export enum EExternalLinks {
   portfolio = "",
   linkedin = "https://www.linkedin.com/in/jerome-procureur/",
   release = "https://github.com/petermethee/JourneyPlan/releases/latest/download/journey_plan-setup.exe",
+  phone = "tel:+33620053517",
 }

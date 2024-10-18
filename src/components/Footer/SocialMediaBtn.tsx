@@ -14,7 +14,7 @@ export default function SocialMediaBtn({
 }) {
   return (
     <Tooltip title={title}>
-      <div className={styles.Btn} onClick={() => window.open(link, "_blank")}>
+      <div className={styles.Btn} onClick={() => window.open(link)}>
         <span className={styles.svgContainer}>{icon}</span>
         <span style={{ backgroundColor: color }} className={styles.BG} />
       </div>
