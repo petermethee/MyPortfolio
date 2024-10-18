@@ -4,8 +4,8 @@ import me from "../../assets/me.png";
 import styles from "./Hero.module.css";
 export default function Hero() {
   return (
-    <div className="relative flex justify-center max-w-screen-2xl mx-auto ">
-      <div className="flex flex-col gap-8 items-center w-full  whitespace-nowrap h-fit ">
+    <div className="relative mx-auto flex max-w-screen-2xl justify-center">
+      <div className="flex h-fit w-full flex-col items-center gap-8 whitespace-nowrap">
         <div className={styles.meContainer}>
           <div className={styles.glow} />
           <div className={styles.lights} />
@@ -14,7 +14,7 @@ export default function Hero() {
           <div className={styles.electronic2} />
         </div>
 
-        <h1 className="text-3xl sm:text-5xl lg:text-7xl uppercase">
+        <h1 className="text-3xl uppercase sm:text-5xl lg:text-7xl">
           Jérôme Procureur
         </h1>
         <h2 className="text-sm lg:text-2xl">

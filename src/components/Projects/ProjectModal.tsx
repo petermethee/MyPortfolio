@@ -37,17 +37,15 @@ export default function ProjectModal({
                   <h1 className="text-2xl font-bold">{project.title}</h1>
                 </div>
               </div>
-              <div className="flex h-3/4 flex-col overflow-y-auto">
+              <div className="h-3/4 overflow-y-auto">
                 <div className="mx-8 mt-5 flex flex-col-reverse gap-8 md:flex-row">
                   <Details project={project} />
                   <StackTech technologies={project.technologies} />
                 </div>
-                <div className="flex min-h-80 flex-1 flex-col justify-center">
-                  <div className="mt-8 w-full text-center text-xl text-secondary">
-                    Photothèque
-                  </div>
-                  <Carousel images={project.images} />
+                <div className="mt-8 w-full text-center text-xl text-secondary">
+                  Photothèque
                 </div>
+                <Carousel images={project.images} />
               </div>
             </>
           )}
