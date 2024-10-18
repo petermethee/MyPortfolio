@@ -11,7 +11,7 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
   const sliderRef = useRef<Slider>(null);
   return (
     <div
-      className="relative mt-2 bg-secondary/10 py-8"
+      className="relative mt-2 overflow-hidden bg-secondary/10 py-8"
       style={{
         boxShadow:
           "inset 0px -20px 20px -25px #000, inset 0px 20px 20px -25px #000",
