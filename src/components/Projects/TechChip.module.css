@@ -3,13 +3,13 @@
     linear-gradient(45deg, black, var(--background)) padding-box,
     conic-gradient(
         from 45deg,
-        #451c07,
-        #d06523,
-        #dcbd92,
         #19223d,
         #1f77e6,
         #4bfbff,
-        #451c07
+        #19223d,
+        #1f77e6,
+        #4bfbff,
+        #19223d
       )
       border-box;
   border: 1px solid transparent;

@@ -18,7 +18,7 @@ export default function Filters({
 }) {
   return (
     <div
-      className="sticky top-0 flex h-fit w-48 flex-col gap-2 rounded-md bg-background p-2"
+      className="sticky top-0 hidden h-fit w-48 flex-col gap-2 rounded-md bg-background p-2 md:flex"
       style={{
         boxShadow: "0px 0px 40px -20px var(--primary_light)",
       }}
@@ -26,7 +26,7 @@ export default function Filters({
       {Object.values(EWorkspace).map((filter) => (
         <div
           key={filter}
-          className={`font-josefin flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
+          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 font-josefin transition-all ${filter === workspace ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setWorkspace(filter)}
         >
           {WorkspaceIcons[filter]}
@@ -38,7 +38,7 @@ export default function Filters({
       {Object.values(ETheme).map((curTheme) => (
         <div
           key={curTheme}
-          className={`font-josefin flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 transition-all ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
+          className={`flex w-full cursor-pointer items-center gap-4 rounded-sm px-2 py-2 font-josefin transition-all ${curTheme === theme ? "bg-primary text-secondary" : "bg-primary_dark hover:bg-primary/60"}`}
           onClick={() => setTheme(curTheme)}
         >
           {ThemeIcons[curTheme]}

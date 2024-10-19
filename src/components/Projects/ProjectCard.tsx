@@ -13,7 +13,7 @@ export default function ProjectCard({
 }) {
   return (
     <AmazingCard
-      className="groupTranslateZ group relative aspect-video max-w-xl"
+      className="groupTranslateZ group relative aspect-video"
       glare
       shine
       w-full
