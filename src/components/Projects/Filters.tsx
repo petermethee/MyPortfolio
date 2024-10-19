@@ -18,7 +18,7 @@ export default function Filters({
 }) {
   return (
     <div
-      className="sticky top-0 hidden h-fit w-48 flex-col gap-2 rounded-md bg-background p-2 md:flex"
+      className="sticky top-0 hidden h-fit w-48 flex-col gap-2 rounded-md bg-background p-2 sm:flex"
       style={{
         boxShadow: "0px 0px 40px -20px var(--primary_light)",
       }}

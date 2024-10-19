@@ -38,7 +38,7 @@ export default function ProjectModal({
                 </div>
               </div>
               <div className="h-3/4 overflow-y-auto">
-                <div className="mx-8 mt-5 flex flex-col-reverse gap-8 md:flex-row">
+                <div className="mx-8 mt-5 flex flex-col-reverse gap-8 sm:flex-row">
                   <Details project={project} />
                   <StackTech technologies={project.technologies} />
                 </div>

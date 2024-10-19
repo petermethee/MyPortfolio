@@ -95,7 +95,7 @@ export default function ContactPage() {
   return (
     <Wrapper>
       <h1>Contactez-moi !</h1>
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className="flex flex-col gap-8 sm:flex-row">
         <div className="flex flex-1 flex-col gap-6 rounded-md bg-primary_dark p-8 shadow-lg">
           <span className="text-secondary">Formulaire</span>
           <div className="flex gap-8">
@@ -136,26 +136,28 @@ export default function ContactPage() {
           </LoadingButton>
         </div>
 
-        <div className="flex h-fit flex-col items-center gap-8 rounded-md bg-primary_dark p-8 shadow-lg">
+        <div className="flex h-fit flex-col gap-8 rounded-md bg-primary_dark p-8 shadow-lg">
           <span className="text-secondary">Autres réseaux</span>
-          <SocialMediaBtn
-            color="#0ea860"
-            icon={<LocalPhoneRoundedIcon />}
-            title="+33 6 20 05 35 17"
-            link={EExternalLinks.phone}
-          />
-          <SocialMediaBtn
-            color="#0e76a8"
-            icon={<LinkedInIcon />}
-            title="LinkedIn"
-            link={EExternalLinks.linkedin}
-          />
-          <SocialMediaBtn
-            color="#283135"
-            icon={<GitHubIcon />}
-            title="Github"
-            link={EExternalLinks.github}
-          />
+          <div className="flex items-center gap-8 sm:flex-col">
+            <SocialMediaBtn
+              color="#0ea860"
+              icon={<LocalPhoneRoundedIcon />}
+              title="+33 6 20 05 35 17"
+              link={EExternalLinks.phone}
+            />
+            <SocialMediaBtn
+              color="#0e76a8"
+              icon={<LinkedInIcon />}
+              title="LinkedIn"
+              link={EExternalLinks.linkedin}
+            />
+            <SocialMediaBtn
+              color="#283135"
+              icon={<GitHubIcon />}
+              title="Github"
+              link={EExternalLinks.github}
+            />
+          </div>
         </div>
       </div>
       <Snackbar
