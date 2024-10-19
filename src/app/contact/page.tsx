@@ -95,6 +95,15 @@ export default function ContactPage() {
   return (
     <Wrapper>
       <h1>Contactez-moi !</h1>
+
+      <p className="my-8 font-josefin text-lg">
+        N'hésitez pas à me contacter pour discuter de vos projets de
+        développement. Je serais ravi de mettre mon expertise à votre service et
+        d'explorer ensemble des opportunités de collaboration. Que ce soit pour
+        une mission spécifique ou un partenariat à long terme, je suis à votre
+        disposition pour échanger et trouver des solutions adaptées à vos
+        besoins.
+      </p>
       <div className="flex flex-col gap-8 sm:flex-row">
         <div className="flex flex-1 flex-col gap-6 rounded-md bg-primary_dark p-8 shadow-lg">
           <span className="text-secondary">Formulaire</span>
