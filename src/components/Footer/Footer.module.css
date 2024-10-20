@@ -21,14 +21,3 @@
 .copyright span {
   font-size: 0.8rem;
 }
-
-.logo {
-  width: 40px;
-}
-
-.socialLinks {
-  flex: 1;
-  display: flex;
-  justify-content: space-evenly;
-  max-width: 30rem;
-}

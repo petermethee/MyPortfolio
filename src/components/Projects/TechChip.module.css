@@ -1,6 +1,6 @@
 .tech {
   background:
-    linear-gradient(45deg, black, var(--background)) padding-box,
+    linear-gradient(45deg, rgb(46, 47, 54), var(--background)) padding-box,
     conic-gradient(
         from 45deg,
         #19223d,

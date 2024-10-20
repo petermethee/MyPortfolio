@@ -14,7 +14,7 @@ export default function Footer() {
         </span>
       </div>
 
-      <div className={styles.socialLinks}>
+      <div className="flex gap-8">
         <SocialMediaBtn
           color="#0ea860"
           icon={<LocalPhoneRoundedIcon />}

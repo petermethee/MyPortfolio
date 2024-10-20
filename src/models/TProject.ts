@@ -1,4 +1,5 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { IconType } from "react-icons";
 import { ETheme, EWorkspace } from "./EThemes";
 
 export type TProject = {
@@ -8,7 +9,7 @@ export type TProject = {
   image: StaticImport;
   url?: string;
   github?: string;
-  technologies: string[];
+  technologies: { icon: IconType; name: string }[];
   duration: string;
   date: string;
   status: "ongoing" | "finished";

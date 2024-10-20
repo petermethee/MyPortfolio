@@ -66,7 +66,6 @@ export default function Navbar() {
           <Button
             color="secondary"
             variant="contained"
-            size="small"
             sx={{ borderRadius: "50px" }}
             startIcon={<DownloadRoundedIcon />}
           >

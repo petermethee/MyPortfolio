@@ -1,10 +1,20 @@
+import { Tooltip } from "@mui/material";
+import { IconType } from "react-icons";
 import styles from "./TechChip.module.css";
-export default function TechChip({ tech }: { tech: string }) {
+export default function TechChip({
+  tech,
+  icon,
+}: {
+  tech: string;
+  icon: IconType;
+}) {
   return (
-    <div
-      className={`h-full w-full rounded-xl px-3 pt-[2px] text-[0.7rem] ${styles.tech} font-josefin childTranslateZ`}
-    >
-      {tech}
-    </div>
+    <Tooltip title={tech}>
+      <div
+        className={`h-full w-full rounded-full p-2 text-[0.7rem] ${styles.tech} childTranslateZ font-josefin`}
+      >
+        {icon({ size: "18" })}
+      </div>
+    </Tooltip>
   );
 }
