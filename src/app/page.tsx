@@ -10,15 +10,14 @@ export default function Home() {
       <Services />
       <div className="w-screen border-y border-text/60 bg-background/30 p-8 backdrop-blur-[2px]">
         <h2>Ils m'ont fait confiance</h2>
-        <div>
+        <div className="flex justify-evenly gap-4">
           {companies.map((company) => (
-            <Image
+            <div
               key={company.name}
-              src={company.logo}
-              width={100}
-              height={100}
-              alt={company.name}
-            />
+              className="overflow-hidden rounded-md bg-white"
+            >
+              <Image src={company.logo} height={50} alt={company.name} />
+            </div>
           ))}
         </div>
         <Qualities />
