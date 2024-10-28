@@ -24,6 +24,7 @@ export default function Level({
       >
         {Levels.map((level) => (
           <Tooltip
+            key={level.rank}
             title={level.description}
             arrow
             open={demo}
