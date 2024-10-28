@@ -1,5 +1,6 @@
 import { projects } from "@/data/projects";
-import { Fade, Modal } from "@mui/material";
+import { ArrowBackIosRounded } from "@mui/icons-material";
+import { Fade, IconButton, Modal } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Carousel from "./Carousel";
@@ -26,6 +27,12 @@ export default function ProjectModal({
           {project && (
             <>
               <div className="relative flex h-1/4 w-full items-center justify-center overflow-hidden shadow-xl">
+                <IconButton
+                  onClick={onClose}
+                  sx={{ position: "absolute", left: 10, top: 10 }}
+                >
+                  <ArrowBackIosRounded />
+                </IconButton>
                 <Image
                   src={project.image}
                   alt={project.title}

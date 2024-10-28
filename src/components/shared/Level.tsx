@@ -28,6 +28,9 @@ export default function Level({
             arrow
             open={demo}
             placement={level.rank % 2 === 0 ? "top" : "bottom"}
+            disableHoverListener={!demo}
+            disableFocusListener={!demo}
+            disableTouchListener={!demo}
           >
             <div
               className={clsx({
