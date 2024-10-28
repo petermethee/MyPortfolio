@@ -17,7 +17,7 @@ export default function Hero() {
         <h1 className="text-3xl uppercase sm:text-5xl lg:text-7xl">
           Jérôme Procureur
         </h1>
-        <h2 className="text-sm lg:text-2xl">
+        <h2 className="text-sm md:text-lg lg:text-2xl">
           Ingénieur logiciel - Fullstack & Web APP développeur
         </h2>
       </div>
