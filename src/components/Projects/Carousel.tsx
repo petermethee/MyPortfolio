@@ -1,5 +1,5 @@
 import { ArrowBackRounded, ArrowForwardRounded } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
+import { ButtonBase, IconButton } from "@mui/material";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { useRef } from "react";
@@ -57,7 +57,16 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
         ]}
       >
         {images.map((image, index) => (
-          <div className="h-40 px-5" key={index}>
+          <div className="relative h-40 px-5" key={index}>
+            <ButtonBase
+              sx={{
+                position: "absolute",
+                inset: "0 1.25rem",
+              }}
+              className="rounded-md"
+              onClick={() => {}}
+            />
+
             <Image
               src={image}
               alt="image"

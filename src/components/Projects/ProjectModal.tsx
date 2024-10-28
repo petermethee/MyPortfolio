@@ -1,5 +1,5 @@
 import { projects } from "@/data/projects";
-import { ArrowBackIosRounded } from "@mui/icons-material";
+import { ArrowBackRounded } from "@mui/icons-material";
 import { Fade, IconButton, Modal } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -31,7 +31,7 @@ export default function ProjectModal({
                   onClick={onClose}
                   sx={{ position: "absolute", left: 10, top: 10 }}
                 >
-                  <ArrowBackIosRounded />
+                  <ArrowBackRounded />
                 </IconButton>
                 <Image
                   src={project.image}

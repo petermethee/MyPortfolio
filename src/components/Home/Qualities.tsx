@@ -6,17 +6,18 @@ import { Button } from "@mui/material";
 export default function Qualities() {
   return (
     <div className="flex flex-col gap-8 pt-4">
-      <div className="flex items-center gap-4">
+      <div className="flex items-center justify-between gap-4">
         <h2 className="text-sm md:text-lg lg:text-2xl">
           Pourquoi travailler avec moi ?
         </h2>
         <Button
           size="small"
           color="secondary"
+          sx={{ fontSize: "0.8rem" }}
           endIcon={
             <ArrowForwardIosRounded
               sx={{
-                fontSize: "12px !important",
+                fontSize: "0.8rem !important",
               }}
             />
           }
