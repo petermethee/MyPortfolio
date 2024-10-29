@@ -29,7 +29,7 @@ export default function ContactPage() {
   const {
     register,
     handleSubmit,
-    formState: { isValid },
+    formState: { isValid, errors },
   } = useForm<TFormData>();
 
   const [snackState, setSnackState] = useState<{
@@ -56,6 +56,7 @@ export default function ContactPage() {
   };
 
   const onSubmit = (data: TFormData) => {
+    if (!isValid) return;
     setLoading(true);
     const templateParams = {
       client_name: data.name,
@@ -96,7 +97,7 @@ export default function ContactPage() {
     <Wrapper>
       <h1>Contactez-moi !</h1>
 
-      <p className="my-8 font-josefin text-lg">
+      <p className="mx-auto my-8 w-3/4 rounded-lg border-[1px] border-secondary bg-primary_dark/30 p-4 font-josefin text-lg backdrop-blur-sm">
         N'hésitez pas à me contacter pour discuter de vos projets de
         développement. Je serais ravi de mettre mon expertise à votre service et
         d'explorer ensemble des opportunités de collaboration. Que ce soit pour
@@ -113,18 +114,22 @@ export default function ContactPage() {
               fullWidth
               variant="outlined"
               label="Prénom"
+              error={!!errors?.name}
             />
             <TextField
               {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
               fullWidth
               variant="outlined"
               label="Email"
+              type="email"
+              error={!!errors?.email}
             />
           </div>
           <TextField
             {...register("subject", { required: true })}
             variant="outlined"
             label="Objet"
+            error={!!errors?.subject}
           />
           <TextField
             {...register("message", { required: true })}
@@ -133,10 +138,10 @@ export default function ContactPage() {
             multiline
             label="Message"
             rows={4}
+            error={!!errors?.message}
           />
           <LoadingButton
             variant="contained"
-            disabled={!isValid}
             onClick={handleSubmit(onSubmit)}
             loading={loading}
             color="secondary"

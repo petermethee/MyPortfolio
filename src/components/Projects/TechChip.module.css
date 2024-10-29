@@ -5,10 +5,10 @@
         from 45deg,
         #19223d,
         #1f77e6,
-        #4bfbff,
+        var(--primary),
         #19223d,
         #1f77e6,
-        #4bfbff,
+        var(--primary),
         #19223d
       )
       border-box;

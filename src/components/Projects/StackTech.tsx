@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-import { primary_light } from "../../../theme";
 
 export default function StackTech({
   technologies,
@@ -11,8 +10,8 @@ export default function StackTech({
       <span className="text-lg text-secondary">Stack Technique</span>
       {technologies.map((technology) => (
         <div key={technology.name} className="flex items-center gap-6">
-          <div className="rounded-full bg-primary p-2">
-            {technology.icon({ size: "18", color: primary_light })}
+          <div className="rounded-full bg-primary_dark p-2">
+            {technology.icon({ size: "18" })}
           </div>
           <span className={`mt-1 font-josefin text-lg font-bold uppercase`}>
             {technology.name}

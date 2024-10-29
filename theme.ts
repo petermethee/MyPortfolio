@@ -1,6 +1,6 @@
 export const text = "#c8c8c8";
 export const background = "#181a1e";
-export const primary = "#5c7293";
+export const primary = "#59667c";
 export const primary_light = "#97d3f7";
 export const primary_dark = "#313a46";
 export const secondary = "#dcbd92";

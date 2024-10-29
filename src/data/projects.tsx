@@ -1,15 +1,9 @@
 import { ETheme, EWorkspace } from "@/models/EThemes";
 import { TProject } from "@/models/TProject";
-import { IconBaseProps } from "react-icons";
-import { FaReact } from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import me from "../assets/me.png";
 import portfolio from "../assets/portfolio.png";
+import { nextJSTech, reactTech, tailwindTech } from "./techIcons";
 
-const reactTech = {
-  name: "React",
-  icon: (props: IconBaseProps) => <FaReact {...props} />,
-};
 export const projects: TProject[] = [
   {
     id: 0,
@@ -19,13 +13,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-    ],
+    technologies: [reactTech, tailwindTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
@@ -42,13 +30,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-    ],
+    technologies: [reactTech, tailwindTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
@@ -65,13 +47,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-    ],
+    technologies: [reactTech, tailwindTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
@@ -88,17 +64,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-      {
-        name: "NextJS",
-        icon: (props: IconBaseProps) => <RiNextjsFill {...props} />,
-      },
-    ],
+    technologies: [reactTech, tailwindTech, nextJSTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
@@ -115,13 +81,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-    ],
+    technologies: [reactTech, tailwindTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
@@ -138,13 +98,7 @@ export const projects: TProject[] = [
     image: portfolio,
     url: "",
     github: "",
-    technologies: [
-      reactTech,
-      {
-        icon: (props: IconBaseProps) => <RiTailwindCssFill {...props} />,
-        name: "Tailwind",
-      },
-    ],
+    technologies: [reactTech, tailwindTech],
     duration: "1 mois",
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
