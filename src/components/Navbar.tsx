@@ -68,6 +68,9 @@ export default function Navbar() {
             variant="contained"
             sx={{ borderRadius: "50px" }}
             startIcon={<DownloadRoundedIcon />}
+            onClick={(_event) =>
+              window.open("/CV_Procureur_2024.pdf", "_blank")
+            }
           >
             CV
           </Button>

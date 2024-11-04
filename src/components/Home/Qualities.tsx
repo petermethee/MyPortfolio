@@ -2,6 +2,7 @@ import { standardFont } from "@/app/layout";
 import { qualities } from "@/data/qualities";
 import { ArrowForwardIosRounded } from "@mui/icons-material";
 import { Button } from "@mui/material";
+import Link from "next/link";
 
 export default function Qualities() {
   return (
@@ -10,20 +11,22 @@ export default function Qualities() {
         <h2 className="text-sm md:text-lg lg:text-2xl">
           Pourquoi travailler avec moi ?
         </h2>
-        <Button
-          size="small"
-          color="secondary"
-          sx={{ fontSize: "0.8rem" }}
-          endIcon={
-            <ArrowForwardIosRounded
-              sx={{
-                fontSize: "0.8rem !important",
-              }}
-            />
-          }
-        >
-          Compétences
-        </Button>
+        <Link href="/skills">
+          <Button
+            size="small"
+            color="secondary"
+            sx={{ fontSize: "0.8rem" }}
+            endIcon={
+              <ArrowForwardIosRounded
+                sx={{
+                  fontSize: "0.8rem !important",
+                }}
+              />
+            }
+          >
+            Compétences
+          </Button>
+        </Link>
       </div>
       <div className="flex flex-col items-center justify-evenly gap-10 md:flex-row">
         {qualities.map((quality) => (
