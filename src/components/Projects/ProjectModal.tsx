@@ -38,7 +38,7 @@ export default function ProjectModal({
                   alt={project.title}
                   fill
                   objectFit="cover"
-                  className="-z-10 brightness-50"
+                  className="-z-10 bg-white brightness-50"
                 />
                 <div>
                   <h1 className="text-2xl font-bold">{project.title}</h1>

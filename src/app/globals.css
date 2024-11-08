@@ -36,6 +36,7 @@ h2 {
 
 .groupTranslateZ * {
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .slick-list {

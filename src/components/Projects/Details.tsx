@@ -4,7 +4,7 @@ import styles from "./Details.module.css";
 export default function Details({ project }: { project: TProject }) {
   return (
     <div
-      className={`font-josefin flex flex-1 flex-col gap-4 rounded-md bg-primary_dark/20 p-6 shadow-md ${styles.table}`}
+      className={`flex flex-1 flex-col gap-4 rounded-md bg-primary_dark/20 p-6 font-josefin shadow-md ${styles.table}`}
     >
       <div>
         <div className={`font-merienda text-lg text-secondary`}>
@@ -22,6 +22,10 @@ export default function Details({ project }: { project: TProject }) {
       <div>
         <span>Client</span>
         <span>{project.client}</span>
+      </div>
+      <div>
+        <span>Équipe</span>
+        <span>{project.team}</span>
       </div>
       <div>
         <span>Description</span>

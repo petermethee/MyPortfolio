@@ -41,8 +41,7 @@ export default function ProjectCard({
         <Image
           alt=""
           src={project.image}
-          objectFit="cover"
-          className="brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
+          className="h-full w-full bg-white object-cover object-center brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
         />
       </div>
       <div className="absolute left-1 top-1 flex gap-4 p-3">
@@ -61,10 +60,10 @@ export default function ProjectCard({
           {project.title}
         </Button>
         <div className="flex gap-2">
-          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.65rem] text-text/80">
+          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.75rem] text-text">
             {project.date}
           </div>
-          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.65rem] text-text/80">
+          <div className="childTranslateZ rounded-2xl bg-primary_dark px-2 text-[0.75rem] text-text">
             {project.duration}
           </div>
         </div>

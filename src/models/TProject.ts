@@ -17,4 +17,5 @@ export type TProject = {
   client: string;
   workspace: EWorkspace;
   theme: ETheme;
+  team: string;
 };

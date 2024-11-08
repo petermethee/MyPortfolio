@@ -13,7 +13,7 @@ export default function StackTech({
           <div className="rounded-full bg-primary_dark p-2">
             {technology.icon({ size: "18" })}
           </div>
-          <span className={`mt-1 font-josefin text-lg font-bold uppercase`}>
+          <span className={`mt-1 font-josefin text-lg font-bold capitalize`}>
             {technology.name}
           </span>
         </div>

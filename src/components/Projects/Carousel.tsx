@@ -57,7 +57,10 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
         ]}
       >
         {images.map((image, index) => (
-          <div className="relative h-40 px-5" key={index}>
+          <div
+            className="relative h-40 px-5 duration-300 hover:scale-110"
+            key={index}
+          >
             <ButtonBase
               sx={{
                 position: "absolute",
@@ -70,7 +73,7 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
             <Image
               src={image}
               alt="image"
-              className="h-full w-full max-w-none cursor-pointer rounded-md bg-background object-cover shadow-xl duration-300 hover:scale-110"
+              className="h-full w-full max-w-none cursor-pointer rounded-md bg-background object-cover shadow-xl"
             />
           </div>
         ))}
