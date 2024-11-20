@@ -1,4 +1,5 @@
 import { TProject } from "@/models/TProject";
+import { Button } from "@mui/material";
 import styles from "./Details.module.css";
 
 export default function Details({ project }: { project: TProject }) {
@@ -7,9 +8,25 @@ export default function Details({ project }: { project: TProject }) {
       className={`flex flex-1 flex-col gap-4 rounded-md bg-primary_dark/20 p-6 font-josefin shadow-md ${styles.table}`}
     >
       <div>
-        <div className={`font-merienda text-lg text-secondary`}>
+        <span className={`font-merienda text-lg text-secondary`}>
           Détails du projet
-        </div>
+        </span>
+        <span className="flex w-full justify-evenly gap-4">
+          <Button
+            size="small"
+            disabled={!project.url}
+            onClick={() => window.open(project.url, "_blank")}
+          >
+            Demo
+          </Button>
+          <Button
+            size="small"
+            disabled={!project.github}
+            onClick={() => window.open(project.github, "_blank")}
+          >
+            GIT
+          </Button>
+        </span>
       </div>
       <div>
         <span>Date</span>
@@ -19,13 +36,21 @@ export default function Details({ project }: { project: TProject }) {
         <span>Durée</span>
         <span>{project.duration}</span>
       </div>
+      {project.client && (
+        <div>
+          <span>Client</span>
+          <span>{project.client}</span>
+        </div>
+      )}
+      {project.team && (
+        <div>
+          <span>Équipe</span>
+          <span>{project.team}</span>
+        </div>
+      )}
       <div>
-        <span>Client</span>
-        <span>{project.client}</span>
-      </div>
-      <div>
-        <span>Équipe</span>
-        <span>{project.team}</span>
+        <span>Contexte</span>
+        <span>{project.context}</span>
       </div>
       <div>
         <span>Description</span>

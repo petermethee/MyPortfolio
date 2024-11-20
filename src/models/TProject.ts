@@ -14,8 +14,9 @@ export type TProject = {
   date: string;
   status: "ongoing" | "finished";
   images: StaticImport[];
-  client: string;
+  client?: string;
   workspace: EWorkspace;
   theme: ETheme;
-  team: string;
+  team?: string;
+  context: string;
 };

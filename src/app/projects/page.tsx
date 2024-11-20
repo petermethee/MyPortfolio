@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export default function ProjectsPage() {
   const [workspace, setWorkspace] = useState(EWorkspace.all);
-  const [theme, setTheme] = useState(ETheme.webApp);
+  const [theme, setTheme] = useState(ETheme.all);
   const [projectId, setProjectId] = useState<number | null>(null);
   return (
     <>

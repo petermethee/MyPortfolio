@@ -23,8 +23,9 @@ export const projects: TProject[] = [
   {
     id: 0,
     title: "Mon Portfolio",
+    context: "Site web vitrine pour présenter mes compétences et mes projets.",
     description:
-      "Site web vitrine pour présenter mes compétences et mes projets.",
+      "Il est basé sur NextJS + React et fait intervenir TailwindCSS.",
     image: portfolio,
     url: "",
     github: "https://github.com/petermethee/portfolio",
@@ -33,7 +34,6 @@ export const projects: TProject[] = [
     date: "09/2024 - 11/2024",
     images: [portfolio, portfolio],
     status: "finished",
-    client: "",
     theme: ETheme.vitrine,
     workspace: EWorkspace.personal,
     team: "3 développeurs, 1 QA, 1 chef d'équipe",
@@ -41,8 +41,9 @@ export const projects: TProject[] = [
   {
     id: 1,
     title: "Journey Plan",
-    description:
-      "Journey Plan est un outil qui permet de planifier ses voyages. C'est une application web React basé sur Electron à installer sur son ordinateur.",
+    context:
+      "Journey Plan est une application web 'self-hosted' spécialisé dans la planification de voyages. C'est un outil qui permet de planifier ses activités, transports et logements  son itinéraire, son budget.",
+    description: "",
     image: jp_logo,
     url: "https://jpshowcase.onrender.com",
     github: "https://github.com/petermethee/JourneyPlan",
@@ -51,7 +52,6 @@ export const projects: TProject[] = [
     date: "2024",
     images: [jp1, jp2, jp3, jp4, jp5],
     status: "finished",
-    client: "",
     theme: ETheme.webApp,
     workspace: EWorkspace.personal,
     team: "3 développeurs, 1 QA, 1 chef d'équipe",
@@ -76,9 +76,9 @@ export const projects: TProject[] = [
   },
   {
     id: 3,
-    title: "My Portfolio",
+    title: "Moneytor",
     description:
-      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
+      "Moneytor est une application Web selfhosted pour gérer ses finances. Elle permet de suivre ses transactions, de surveiller ses budgets et de planifier ses dépenses.",
     image: portfolio,
     url: "",
     github: "",
@@ -87,16 +87,15 @@ export const projects: TProject[] = [
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
     status: "finished",
-    client: "",
     theme: ETheme.webApp,
     workspace: EWorkspace.personal,
     team: "3 développeurs, 1 QA, 1 chef d'équipe",
   },
   {
     id: 4,
-    title: "My Portfolio",
+    title: "Extractor",
     description:
-      "My portfolio site blabblablab blablabblabla bblablabbl ablab blablabblablab blablabbl ablabblablabblablabb lablabblabl a bblab labbl ablabblablabblabl abblabla bblablabbla blabblab labbla",
+      "Extractor est un outil de gestion des commandes conçu sur mesure pour Parfumerie Mireille, dans le cadre de sa transition numérique. Ce logiciel répond à l’ambition de moderniser son pôle dédié aux comités d’entreprise, en optimisant le service client et en assurant une meilleure traçabilité et capitalisation des commandes effectuées.",
     image: portfolio,
     url: "",
     github: "",
@@ -105,7 +104,6 @@ export const projects: TProject[] = [
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
     status: "finished",
-    client: "",
     theme: ETheme.webApp,
     workspace: EWorkspace.personal,
     team: "3 développeurs, 1 QA, 1 chef d'équipe",
@@ -123,7 +121,6 @@ export const projects: TProject[] = [
     date: "2024",
     images: [me, portfolio, portfolio, portfolio],
     status: "finished",
-    client: "",
     theme: ETheme.webApp,
     workspace: EWorkspace.personal,
     team: "3 développeurs, 1 QA, 1 chef d'équipe",
