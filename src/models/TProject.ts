@@ -19,4 +19,5 @@ export type TProject = {
   theme: ETheme;
   team?: string;
   context: string;
+  role?: string;
 };
