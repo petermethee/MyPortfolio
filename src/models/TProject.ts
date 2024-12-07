@@ -3,10 +3,11 @@ import { IconType } from "react-icons";
 import { ETheme, EWorkspace } from "./EThemes";
 
 export type TProject = {
-  id: number;
   title: string;
+  context: string;
   description: string;
-  image: StaticImport;
+  thumbnail: StaticImport;
+  tasks?: string[];
   url?: string;
   github?: string;
   technologies: { icon: IconType; name: string }[];
@@ -18,6 +19,5 @@ export type TProject = {
   workspace: EWorkspace;
   theme: ETheme;
   team?: string;
-  context: string;
   role?: string;
 };

@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function ProjectsPage() {
   const [workspace, setWorkspace] = useState(EWorkspace.all);
   const [theme, setTheme] = useState(ETheme.all);
-  const [projectId, setProjectId] = useState<number | null>(null);
+  const [projectId, setProjectId] = useState<string | null>(null);
   return (
     <>
       <Wrapper flex>
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             )
             .map((project) => (
               <div
-                key={project.id}
+                key={project.title}
                 className="w-full min-w-[250px] max-w-[500px] lg:w-[40%]"
               >
                 <ProjectCard

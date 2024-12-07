@@ -11,14 +11,14 @@ export default function ProjectModal({
   projectId,
   onClose,
 }: {
-  projectId: number | null;
+  projectId: string | null;
   onClose: () => void;
 }) {
   const [project, setProject] = useState(
-    projects.find((project) => project.id === projectId),
+    projects.find((project) => project.title === projectId),
   );
   useEffect(() => {
-    setProject(projects.find((project) => project.id === projectId));
+    setProject(projects.find((project) => project.title === projectId));
   }, [projectId]);
   return (
     <Modal open={projectId !== null} onClose={onClose}>
@@ -34,7 +34,7 @@ export default function ProjectModal({
                   <ArrowBackRounded />
                 </IconButton>
                 <Image
-                  src={project.image}
+                  src={project.thumbnail}
                   alt={project.title}
                   fill
                   objectFit="cover"

@@ -56,6 +56,14 @@ export default function Details({ project }: { project: TProject }) {
         <span>Description</span>
         <span>{project.description}</span>
       </div>
+      {project.tasks && (
+        <div>
+          <span>Tâches</span>
+          <ul className="list-disc pl-5">
+            {project.tasks.map((task) => task && <li>{task}</li>)}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

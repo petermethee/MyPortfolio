@@ -9,7 +9,7 @@ export default function ProjectCard({
   onClick,
 }: {
   project: TProject;
-  onClick: (id: number) => void;
+  onClick: (id: string) => void;
 }) {
   return (
     <AmazingCard
@@ -35,12 +35,12 @@ export default function ProjectCard({
     >
       <ButtonBase
         className="absolute inset-0 z-10 rounded-xl"
-        onClick={() => onClick(project.id)}
+        onClick={() => onClick(project.title)}
       />
       <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl">
         <Image
           alt=""
-          src={project.image}
+          src={project.thumbnail}
           className="h-full w-full bg-white object-cover object-center brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
         />
       </div>
@@ -55,7 +55,7 @@ export default function ProjectCard({
           color="secondary"
           size="small"
           className="childTranslateZ"
-          onClick={() => onClick(project.id)}
+          onClick={() => onClick(project.title)}
         >
           {project.title}
         </Button>
