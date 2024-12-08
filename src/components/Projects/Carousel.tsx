@@ -1,5 +1,8 @@
-import { ArrowBackRounded, ArrowForwardRounded } from "@mui/icons-material";
-import { ButtonBase, IconButton } from "@mui/material";
+import {
+  ArrowBackIosRounded,
+  ArrowForwardIosRounded,
+} from "@mui/icons-material";
+import { ButtonBase } from "@mui/material";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { useRef } from "react";
@@ -17,19 +20,38 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
           "inset 0px -20px 20px -25px #000, inset 0px 20px 20px -25px #000",
       }}
     >
-      <IconButton
-        onClick={() => sliderRef.current?.slickPrev()}
-        className="absolute left-0 top-1/2 z-10 -translate-y-1/2"
-      >
-        <ArrowBackRounded />
-      </IconButton>
+      <div className="absolute left-0 top-0 z-10 flex h-full items-center justify-center px-2 backdrop-blur-md duration-300 hover:bg-primary/10 hover:px-5">
+        <ButtonBase
+          sx={{
+            position: "absolute",
+            inset: "0 0",
+          }}
+          onClick={() => sliderRef.current?.slickPrev()}
+        />
+        <ArrowBackIosRounded />
+      </div>
 
-      <IconButton
-        onClick={() => sliderRef.current?.slickNext()}
-        className="absolute right-0 top-1/2 z-10 -translate-y-1/2"
-      >
-        <ArrowForwardRounded />
-      </IconButton>
+      <div className="absolute right-0 top-0 z-10 flex h-full items-center justify-center px-2 backdrop-blur-md duration-300 hover:bg-primary/10 hover:px-5">
+        <ButtonBase
+          sx={{
+            position: "absolute",
+            inset: "0 0",
+          }}
+          onClick={() => sliderRef.current?.slickNext()}
+        />
+        <ArrowForwardIosRounded />
+      </div>
+      <style>
+        {`
+          .slick-dots li button:before {
+            color: var(--primary);
+            opacity: 0.5; 
+          }
+          .slick-dots li.slick-active button:before {
+            color: var(--secondary);
+          }
+  `}
+      </style>
       <Slider
         ref={sliderRef}
         centerMode
@@ -57,24 +79,21 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
         ]}
       >
         {images.map((image, index) => (
-          <div
-            className="relative h-40 px-5 duration-300 hover:scale-110"
-            key={index}
-          >
-            <ButtonBase
-              sx={{
-                position: "absolute",
-                inset: "0 1.25rem",
-              }}
-              className="rounded-md"
-              onClick={() => {}}
-            />
-
-            <Image
-              src={image}
-              alt="image"
-              className="h-full w-full max-w-none cursor-pointer rounded-md bg-background object-cover shadow-xl"
-            />
+          <div className="h-80 px-5 duration-300 hover:scale-110" key={index}>
+            <div className="relative flex h-full items-center justify-center overflow-hidden rounded-md bg-background shadow-md">
+              <ButtonBase
+                sx={{
+                  position: "absolute",
+                  inset: "0 0",
+                }}
+                onClick={() => {}}
+              />
+              <Image
+                src={image}
+                alt={""}
+                className="h-full max-w-none object-contain"
+              />
+            </div>
           </div>
         ))}
       </Slider>
