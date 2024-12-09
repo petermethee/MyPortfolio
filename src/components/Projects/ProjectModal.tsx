@@ -26,7 +26,7 @@ export default function ProjectModal({
         <div className="absolute left-1/2 top-1/2 h-[80%] w-[90%] max-w-screen-xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-background">
           {project && (
             <>
-              <div className="relative flex h-1/4 w-full items-center justify-center overflow-hidden shadow-xl">
+              <div className="relative flex h-1/4 w-full items-center justify-center overflow-hidden rounded-t-xl border-[1px] border-b-0 border-solid border-primary_dark shadow-xl">
                 <IconButton
                   onClick={onClose}
                   sx={{ position: "absolute", left: 10, top: 10 }}

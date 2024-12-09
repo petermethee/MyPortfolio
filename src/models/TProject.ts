@@ -17,7 +17,7 @@ export type TProject = {
   images: StaticImport[];
   client?: string;
   workspace: EWorkspace;
-  theme: ETheme;
+  theme: ETheme[];
   team?: string;
   role?: string;
 };

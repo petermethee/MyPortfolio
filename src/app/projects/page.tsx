@@ -26,7 +26,7 @@ export default function ProjectsPage() {
               (project) =>
                 (project.workspace === workspace ||
                   workspace === EWorkspace.all) &&
-                (project.theme === theme || theme === ETheme.all),
+                (project.theme.includes(theme) || theme === ETheme.all),
             )
             .map((project) => (
               <div

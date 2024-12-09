@@ -13,6 +13,8 @@ export default function Details({ project }: { project: TProject }) {
         </span>
         <span className="flex w-full justify-evenly gap-4">
           <Button
+            color="secondary"
+            variant="outlined"
             size="small"
             disabled={!project.url}
             onClick={() => window.open(project.url, "_blank")}
@@ -20,6 +22,8 @@ export default function Details({ project }: { project: TProject }) {
             Demo
           </Button>
           <Button
+            color="secondary"
+            variant="outlined"
             size="small"
             disabled={!project.github}
             onClick={() => window.open(project.github, "_blank")}

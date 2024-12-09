@@ -2,6 +2,7 @@ import {
   ArrowBackIosRounded,
   ArrowForwardIosRounded,
 } from "@mui/icons-material";
+import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 import { ButtonBase, IconButton, Modal } from "@mui/material";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
@@ -29,7 +30,7 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
   return (
     <>
       <Modal open={open} onClose={handleClose}>
-        <div className="absolute left-1/2 top-1/2 flex h-[60%] w-[80%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-md bg-white/20 px-14 shadow-md backdrop-blur-lg">
+        <div className="absolute left-1/2 top-1/2 flex h-[70%] w-[80%] max-w-screen-lg -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-md bg-white/20 px-14 shadow-md backdrop-blur-lg">
           {selectedImageIndex !== null && (
             <>
               <Image
@@ -108,7 +109,6 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
         </style>
         <Slider
           ref={sliderRef}
-          centerMode
           swipeToSlide
           dots
           slidesToShow={3}
@@ -134,18 +134,22 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
         >
           {images.map((image, index) => (
             <div className="h-80 px-5 duration-300 hover:scale-110" key={index}>
-              <div className="relative flex h-full items-center justify-center overflow-hidden rounded-md bg-background shadow-md">
-                <ButtonBase
+              <div className="group relative flex h-full items-center justify-center overflow-hidden rounded-md bg-background shadow-md">
+                <IconButton
+                  className="invisible group-hover:visible"
                   sx={{
                     position: "absolute",
-                    inset: "0 0",
+                    zIndex: 10,
                   }}
                   onClick={() => handleOpen(index)}
-                />
+                >
+                  <VisibilityRoundedIcon />
+                </IconButton>
+
                 <Image
                   src={image}
                   alt={""}
-                  className="h-full max-w-none object-contain"
+                  className="h-full max-w-none object-contain duration-300 group-hover:brightness-50"
                 />
               </div>
             </div>

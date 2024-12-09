@@ -44,7 +44,7 @@ export default function ProjectCard({
           className="h-full w-full bg-white object-cover object-center brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
         />
       </div>
-      <div className="absolute left-1 top-1 flex gap-4 p-3">
+      <div className="absolute flex gap-4 p-3">
         {project.technologies.map((tech) => (
           <TechChip key={tech.name} icon={tech.icon} tech={tech.name} />
         ))}

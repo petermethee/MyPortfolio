@@ -4,7 +4,7 @@
     conic-gradient(
         from 45deg,
         #19223d,
-        #1f77e6,
+        var(--secondary),
         var(--primary),
         #19223d,
         #1f77e6,
@@ -13,7 +13,7 @@
       )
       border-box;
   border: 1px solid transparent;
-  box-shadow: 0 0 6px -2px var(--primary_light) !important;
+  box-shadow: 0 0 6px -2px #000 !important;
 }
 
 /* .tech {
