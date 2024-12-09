@@ -20,7 +20,7 @@ export default function Career() {
     {
       date: "2019",
       title: "Parfumerie Mireille",
-      projet: "Application Web - Outils interne à l'entreprise",
+      projet: "Application Web - Outil interne à l'entreprise",
       duration: "4 mois",
       location: "Sorgues - Remote à Aix en Provence",
       contract: "CDD",
@@ -28,7 +28,7 @@ export default function Career() {
     {
       date: "2020",
       title: "Ingeneria y Controles Automatizados",
-      projet: "Application mobile - Outils interne à l'entreprise",
+      projet: "Application mobile - Outil interne à l'entreprise",
       duration: "3 mois",
       location: "Panama City, Panama",
       contract: "SFE",
@@ -49,9 +49,9 @@ export default function Career() {
   ];
 
   return (
-    <div className="mx-auto w-fit flex flex-col-reverse">
+    <div className="mx-auto flex w-fit flex-col-reverse">
       {events.map((event, index) => (
-        <div key={event.title} className="flex gap-10 items-center">
+        <div key={event.title} className="flex items-center gap-10">
           <CareerBubble
             date={event.date}
             first={index === 0}

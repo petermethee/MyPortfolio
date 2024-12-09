@@ -58,7 +58,15 @@ export default function Details({ project }: { project: TProject }) {
       </div>
       <div>
         <span>Description</span>
-        <span>{project.description}</span>
+        <span>
+          {project.description.map((desc) => (
+            <span key={desc}>
+              {desc}
+              <br />
+              <br />
+            </span>
+          ))}
+        </span>
       </div>
       {project.tasks && (
         <div>

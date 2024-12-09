@@ -5,7 +5,7 @@ import { ETheme, EWorkspace } from "./EThemes";
 export type TProject = {
   title: string;
   context: string;
-  description: string;
+  description: string[];
   thumbnail: StaticImport;
   tasks?: string[];
   url?: string;
