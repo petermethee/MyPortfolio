@@ -35,6 +35,7 @@ export default function Companies() {
             className="h-16 w-32 overflow-hidden rounded-md border-[3px] border-secondary bg-white shadow-lg md:w-44"
           >
             <Image
+              loading="lazy"
               src={company.logo}
               alt={company.name}
               className="h-full w-full object-contain"

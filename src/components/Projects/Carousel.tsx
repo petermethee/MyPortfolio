@@ -34,8 +34,9 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
           {selectedImageIndex !== null && (
             <>
               <Image
+                loading="lazy"
                 src={images[selectedImageIndex]}
-                alt=""
+                alt="header-section"
                 className="h-full w-auto object-contain"
               />
               <IconButton
@@ -145,8 +146,9 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
                 </IconButton>
 
                 <Image
+                  loading="lazy"
                   src={image}
-                  alt={""}
+                  alt={"photothèque"}
                   className="h-full max-w-none object-contain duration-300 group-hover:brightness-50"
                 />
               </div>

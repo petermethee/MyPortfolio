@@ -53,7 +53,8 @@ export default function ProjectCard({
       />
       <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl">
         <Image
-          alt=""
+          loading="lazy"
+          alt={project.title}
           src={project.thumbnail}
           className="h-full w-full bg-white object-cover object-center brightness-50 transition-all duration-300 group-hover:scale-125 group-hover:brightness-90"
         />

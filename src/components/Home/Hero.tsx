@@ -9,7 +9,12 @@ export default function Hero() {
         <div className={styles.meContainer}>
           <div className={styles.glow} />
           <div className={styles.lights} />
-          <Image className={styles.me} alt="" src={me} />
+          <Image
+            loading="lazy"
+            className={styles.me}
+            alt="hero-section"
+            src={me}
+          />
           <div className={styles.electronic} />
           <div className={styles.electronic2} />
         </div>

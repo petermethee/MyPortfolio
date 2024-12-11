@@ -34,6 +34,7 @@ export default function ProjectModal({
                   <ArrowBackRounded />
                 </IconButton>
                 <Image
+                  loading="lazy"
                   src={project.thumbnail}
                   alt={project.title}
                   fill
