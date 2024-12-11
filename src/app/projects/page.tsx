@@ -2,7 +2,7 @@
 import Filters from "@/components/Projects/Filters";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import ProjectDetails from "@/components/Projects/ProjectModal";
-import Wrapper from "@/components/shared/Wrapper";
+import PageWrapper from "@/components/shared/PageWrapper";
 import { projects } from "@/data/projects";
 import { ETheme, EWorkspace } from "@/models/EThemes";
 import { useState } from "react";
@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   const [projectId, setProjectId] = useState<string | null>(null);
   return (
     <>
-      <Wrapper flex>
+      <PageWrapper flex>
         <Filters
           workspace={workspace}
           theme={theme}
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
               </div>
             ))}
         </div>
-      </Wrapper>
+      </PageWrapper>
       <ProjectDetails
         projectId={projectId}
         onClose={() => setProjectId(null)}

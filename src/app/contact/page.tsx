@@ -1,6 +1,6 @@
 "use client";
 import SocialMediaBtn from "@/components/Footer/SocialMediaBtn";
-import Wrapper from "@/components/shared/Wrapper";
+import PageWrapper from "@/components/shared/PageWrapper";
 import { EExternalLinks } from "@/helper/EExternalLinks";
 import emailjs from "@emailjs/browser";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -94,7 +94,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <Wrapper>
+    <PageWrapper>
       <h1>Contactez-moi !</h1>
 
       <p className="mx-auto my-8 w-3/4 rounded-lg border-[1px] border-secondary bg-primary_dark/30 p-4 font-josefin text-lg backdrop-blur-sm">
@@ -188,6 +188,6 @@ export default function ContactPage() {
           {snackState.message}
         </Alert>
       </Snackbar>
-    </Wrapper>
+    </PageWrapper>
   );
 }

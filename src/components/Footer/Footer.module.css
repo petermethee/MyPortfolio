@@ -1,13 +1,10 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 1rem;
-  background: linear-gradient(#00000000, #00000056);
+  background: linear-gradient(#00000000, #0000009b);
   backdrop-filter: blur(4px);
   box-shadow: 0 0 6px 0 #00000077;
 }
