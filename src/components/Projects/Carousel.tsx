@@ -111,11 +111,9 @@ export default function Carousel({ images }: { images: StaticImport[] }) {
           ref={sliderRef}
           swipeToSlide
           dots
+          infinite={false}
           slidesToShow={3}
           arrows={false}
-          autoplay
-          pauseOnHover
-          autoplaySpeed={3000}
           className="text-text"
           responsive={[
             {
