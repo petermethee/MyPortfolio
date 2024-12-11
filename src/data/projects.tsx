@@ -49,6 +49,10 @@ import moneytor from "../assets/moneytor/moneytor1.png";
 import pellenc2 from "../assets/pellenc/pellenc2.jpg";
 import pellenc_machine from "../assets/pellenc/pellenc_machine.jpg";
 import portfolio from "../assets/portfolio/portfolio.png";
+import portfolio1 from "../assets/portfolio/portfolio1.png";
+import portfolio2 from "../assets/portfolio/portfolio2.png";
+import portfolio3 from "../assets/portfolio/portfolio3.png";
+
 import {
   androidTech,
   angularTech,
@@ -256,14 +260,13 @@ export const projects: TProject[] = [
       "Il est basé sur NextJS + React et fait intervenir TailwindCSS.",
     ],
     thumbnail: portfolio,
-    github: "https://github.com/petermethee/portfolio",
+    github: "https://github.com/petermethee/MyPortfolio",
     technologies: [reactTech, tailwindTech, nextJSTech],
     duration: "2 mois",
     date: "2024",
-    images: [portfolio, portfolio],
+    images: [portfolio1, portfolio2, portfolio3],
     status: "finished",
     theme: [ETheme.vitrine],
     workspace: EWorkspace.personal,
-    team: "Seul",
   },
 ];

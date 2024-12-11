@@ -22,21 +22,22 @@ export default function ProjectCard({
       buttons={
         <>
           <Button
-            disabled={!project.github}
-            variant="contained"
-            color="secondary"
-            startIcon={<FaGithub />}
-          >
-            GIT
-          </Button>
-
-          <Button
             disabled={!project.url}
             variant="outlined"
             color="secondary"
             startIcon={<FiCodesandbox />}
+            onClick={() => window.open(project.url, "_blank")}
           >
             DEMO
+          </Button>
+          <Button
+            disabled={!project.github}
+            variant="contained"
+            color="secondary"
+            startIcon={<FaGithub />}
+            onClick={() => window.open(project.github, "_blank")}
+          >
+            GIT
           </Button>
         </>
       }
