@@ -27,7 +27,7 @@ export default function RootLayout({
           content="Portfolio de Jérôme Procureur, développeur fullstack."
         />
         <meta property="og:type" content="website" />
-        <link rel="icon" href="/portfolio.ico" />
+        <link rel="icon" href="/portfolio.svg" />
       </head>
       <body
         className={`font-merienda text-text ${standardFont.variable} ${meriendaFont.variable}`}
