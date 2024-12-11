@@ -2,7 +2,6 @@
 import ArchitectureRoundedIcon from "@mui/icons-material/ArchitectureRounded";
 import DataObjectRoundedIcon from "@mui/icons-material/DataObjectRounded";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
-import EuroRoundedIcon from "@mui/icons-material/EuroRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Person4RoundedIcon from "@mui/icons-material/Person4Rounded";
@@ -35,11 +34,11 @@ const routes = [
     icon: <Person4RoundedIcon fontSize="small" />,
   },
 
-  {
-    title: "Pricing",
-    path: "/pricing",
-    icon: <EuroRoundedIcon fontSize="small" />,
-  },
+  // {
+  //   title: "Pricing",
+  //   path: "/pricing",
+  //   icon: <EuroRoundedIcon fontSize="small" />,
+  // },
 ];
 
 export default function Navbar() {
