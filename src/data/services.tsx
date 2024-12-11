@@ -1,17 +1,16 @@
+import DockerIcon from "@/assets/DockerIcon";
 import { TServiceCard } from "@/components/Home/ServiceCard";
 import ApiRoundedIcon from "@mui/icons-material/ApiRounded";
 import ArchitectureRoundedIcon from "@mui/icons-material/ArchitectureRounded";
 import DesktopMacRoundedIcon from "@mui/icons-material/DesktopMacRounded";
 import DiamondRoundedIcon from "@mui/icons-material/DiamondRounded";
+import FunctionsRoundedIcon from "@mui/icons-material/FunctionsRounded";
 import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
+import MouseRoundedIcon from "@mui/icons-material/MouseRounded";
 import PhoneAndroidRoundedIcon from "@mui/icons-material/PhoneAndroidRounded";
-import SavedSearchRoundedIcon from "@mui/icons-material/SavedSearchRounded";
 import SecurityRoundedIcon from "@mui/icons-material/SecurityRounded";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
-import TranslateRoundedIcon from "@mui/icons-material/TranslateRounded";
 import WorkspacesRoundedIcon from "@mui/icons-material/WorkspacesRounded";
-
-import DockerIcon from "@/assets/DockerIcon";
 export const services: TServiceCard[] = [
   {
     title: "Frontend",
@@ -21,12 +20,12 @@ export const services: TServiceCard[] = [
         icon: <DiamondRoundedIcon />,
       },
       {
-        text: "Application Web (PWA - Electron)",
+        text: "Application Web",
         icon: <DesktopMacRoundedIcon />,
       },
       {
-        text: "SEO",
-        icon: <SavedSearchRoundedIcon />,
+        text: "Logiciels (PWA - Electron)",
+        icon: <MouseRoundedIcon />,
       },
     ],
     icon: <LanguageRoundedIcon />,
@@ -44,8 +43,8 @@ export const services: TServiceCard[] = [
         icon: <ArchitectureRoundedIcon />,
       },
       {
-        text: "Sécurité - Cryptage - Authentification",
-        icon: <SecurityRoundedIcon />,
+        text: "Algorithmes - Calculs numériques",
+        icon: <FunctionsRoundedIcon />,
       },
     ],
     icon: <StorageRoundedIcon />,
@@ -62,8 +61,8 @@ export const services: TServiceCard[] = [
         text: "Docker",
       },
       {
-        icon: <TranslateRoundedIcon />,
-        text: "Anglais (B2)",
+        text: "Sécurité - Cryptage - Authentification",
+        icon: <SecurityRoundedIcon />,
       },
     ],
     icon: <WorkspacesRoundedIcon />,

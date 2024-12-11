@@ -4,7 +4,9 @@ import DesktopWindowsRoundedIcon from "@mui/icons-material/DesktopWindowsRounded
 import HomeRepairServiceRoundedIcon from "@mui/icons-material/HomeRepairServiceRounded";
 import PhoneAndroidRoundedIcon from "@mui/icons-material/PhoneAndroidRounded";
 import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
+import TranslateRoundedIcon from "@mui/icons-material/TranslateRounded";
 import WorkspacesRoundedIcon from "@mui/icons-material/WorkspacesRounded";
+
 export const skills: TSkill[] = [
   {
     title: "Frontend",
@@ -168,6 +170,25 @@ export const skills: TSkill[] = [
           {
             name: "VSCode",
             level: 4,
+          },
+        ],
+      },
+
+      {
+        title: "Langues",
+        icon: <TranslateRoundedIcon />,
+        skills: [
+          {
+            level: 5,
+            name: "Français",
+          },
+          {
+            level: 4,
+            name: "Anglais",
+          },
+          {
+            level: 4,
+            name: "Espagnol",
           },
         ],
       },
