@@ -1,6 +1,8 @@
 import { TProject } from "@/models/TProject";
 import { Button, ButtonBase } from "@mui/material";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { FiCodesandbox } from "react-icons/fi";
 import AmazingCard from "../shared/AmazingCard";
 import TechChip from "./TechChip";
 
@@ -23,11 +25,17 @@ export default function ProjectCard({
             disabled={!project.github}
             variant="contained"
             color="secondary"
+            startIcon={<FaGithub />}
           >
             GIT
           </Button>
 
-          <Button disabled={!project.url} variant="outlined" color="secondary">
+          <Button
+            disabled={!project.url}
+            variant="outlined"
+            color="secondary"
+            startIcon={<FiCodesandbox />}
+          >
             DEMO
           </Button>
         </>

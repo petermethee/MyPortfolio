@@ -1,7 +1,8 @@
 import { TProject } from "@/models/TProject";
 import { Button } from "@mui/material";
+import { FaGithub } from "react-icons/fa";
+import { FiCodesandbox } from "react-icons/fi";
 import styles from "./Details.module.css";
-
 export default function Details({ project }: { project: TProject }) {
   return (
     <div
@@ -17,16 +18,18 @@ export default function Details({ project }: { project: TProject }) {
             variant="outlined"
             size="small"
             disabled={!project.url}
+            startIcon={<FiCodesandbox />}
             onClick={() => window.open(project.url, "_blank")}
           >
             Demo
           </Button>
           <Button
             color="secondary"
-            variant="outlined"
+            variant="contained"
             size="small"
             disabled={!project.github}
             onClick={() => window.open(project.github, "_blank")}
+            startIcon={<FaGithub />}
           >
             GIT
           </Button>

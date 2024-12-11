@@ -26,6 +26,12 @@ import jps3 from "../assets/jpshowcase/jps3.png";
 import jps4 from "../assets/jpshowcase/jps4.png";
 import jps5 from "../assets/jpshowcase/jps5.png";
 import jps6 from "../assets/jpshowcase/jps6.png";
+import sci1 from "../assets/scishare/sci1.png";
+import sci2 from "../assets/scishare/sci2.png";
+import sci3 from "../assets/scishare/sci3.png";
+import sci4 from "../assets/scishare/sci4.png";
+import sci5 from "../assets/scishare/sci5.png";
+import sci6 from "../assets/scishare/sci6.png";
 
 import coach1 from "../assets/coach/coach1.jpg";
 import coach2 from "../assets/coach/coach2.jpg";
@@ -37,7 +43,7 @@ import coach7 from "../assets/coach/coach7.jpg";
 import coach8 from "../assets/coach/coach8.jpg";
 import coach9 from "../assets/coach/coach9.jpg";
 import logoCoach from "../assets/coach/logo.png";
-import me from "../assets/me.png";
+
 import moneytorLogo from "../assets/moneytor/finalVariant2.png";
 import moneytor from "../assets/moneytor/moneytor1.png";
 import pellenc2 from "../assets/pellenc/pellenc2.jpg";
@@ -74,8 +80,6 @@ export const projects: TProject[] = [
       "En ce qui concerne la version machine, l'application Electron embarquait seulement le frontend React qui s'interfaçait à l'API OPC-UA présente sur la machine.",
     ],
     thumbnail: pellenc,
-    url: "",
-    github: "",
     technologies: [reactTech, electronTech, pythonTech],
     duration: "1 an 6 mois",
     date: "2021 - 2022",
@@ -108,8 +112,7 @@ export const projects: TProject[] = [
       "Développement de l'outil avec validation itérative du client",
       "Formation des utilisateurs et création de notices",
     ],
-    url: "",
-    github: "",
+    github: "https://github.com/petermethee/Extractor",
     technologies: [pythonTech, htmlTech, cssTech],
     duration: "5 mois",
     date: "2020 - 2021",
@@ -127,9 +130,7 @@ export const projects: TProject[] = [
     description: [
       "Sci-share est une application Web multi-service. Cela signifie qu'elle est constituée d'une partie frontend (Angular) et de plusieurs services backend qui interagissent entre eux en GRPC (protocol de communication développé par Google). Au niveau backend, les technologies utilisées sont Golang, JAVA, .NET, PostgreSQL, Redis; tout ce beau monde orchestré par Docker.",
     ],
-    thumbnail: portfolio,
-    url: "",
-    github: "",
+    thumbnail: sci1,
     technologies: [
       angularTech,
       javaTech,
@@ -140,7 +141,7 @@ export const projects: TProject[] = [
     ],
     duration: "9 mois",
     date: "2024",
-    images: [me, portfolio, portfolio, portfolio],
+    images: [sci1, sci2, sci3, sci4, sci5, sci6],
     status: "ongoing",
     theme: [ETheme.webApp],
     workspace: EWorkspace.professional,
@@ -213,8 +214,6 @@ export const projects: TProject[] = [
       "Coach sportif est une application Android accessible sur PlayStore. Elle a été développementée sur Android Studio en JAVA + XML.",
     ],
     thumbnail: logoCoach,
-    url: "",
-    github: "",
     technologies: [androidTech, javaTech],
     duration: "9 mois",
     date: "2024",
@@ -257,7 +256,6 @@ export const projects: TProject[] = [
       "Il est basé sur NextJS + React et fait intervenir TailwindCSS.",
     ],
     thumbnail: portfolio,
-    url: "",
     github: "https://github.com/petermethee/portfolio",
     technologies: [reactTech, tailwindTech, nextJSTech],
     duration: "2 mois",
