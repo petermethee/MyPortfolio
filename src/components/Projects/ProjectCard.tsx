@@ -43,7 +43,12 @@ export default function ProjectCard({
       }
     >
       <ButtonBase
-        className="absolute inset-0 z-10 rounded-xl"
+        sx={{
+          position: "absolute",
+          borderRadius: "0.75rem",
+          inset: "0",
+          zIndex: 10,
+        }}
         onClick={() => onClick(project.title)}
       />
       <div className="absolute -z-10 h-full w-full overflow-hidden rounded-xl">
