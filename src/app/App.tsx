@@ -1,11 +1,11 @@
 "use client";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar";
+import { meriendaFont } from "@/helper/fonts";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { useEffect, useMemo } from "react";
 import { cssColors, primary, secondary } from "../../theme";
 import styles from "./App.module.css";
-import { meriendaFont } from "./layout";
 
 export default function App({ children }: { children: React.ReactNode }) {
   const theme = useMemo(() => {

@@ -1,5 +1,5 @@
-import { standardFont } from "@/app/layout";
 import { qualities } from "@/data/qualities";
+import { standardFont } from "@/helper/fonts";
 import { ArrowForwardIosRounded } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import Link from "next/link";
