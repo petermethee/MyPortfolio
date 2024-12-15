@@ -13,7 +13,7 @@ export const skills: TSkill[] = [
     icon: <DesktopWindowsRoundedIcon />,
     items: [
       {
-        title: "Languages",
+        title: "Langages",
         icon: <DataObjectRoundedIcon />,
         skills: [
           {
@@ -77,7 +77,7 @@ export const skills: TSkill[] = [
     icon: <StorageRoundedIcon />,
     items: [
       {
-        title: "Languages",
+        title: "Langages",
         icon: <DataObjectRoundedIcon />,
         skills: [
           {

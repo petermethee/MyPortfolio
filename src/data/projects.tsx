@@ -147,7 +147,7 @@ export const projects: TProject[] = [
     date: "2024",
     images: [sci1, sci2, sci3, sci4, sci5, sci6],
     status: "ongoing",
-    theme: [ETheme.webApp],
+    theme: [ETheme.webApp, ETheme.backend],
     workspace: EWorkspace.professional,
     client: "AdvansLab",
     role: "Architecte - Développeur",

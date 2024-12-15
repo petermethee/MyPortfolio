@@ -12,12 +12,12 @@ import { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 const routes = [
   {
-    title: "Home",
+    title: "Accueil",
     path: "/",
     icon: <HomeRoundedIcon fontSize="small" />,
   },
   {
-    title: "Projects",
+    title: "Projets",
     path: "/projects",
     icon: <ArchitectureRoundedIcon fontSize="small" />,
   },
@@ -51,7 +51,7 @@ export default function Navbar() {
   }, [pathName]);
   return (
     <>
-      <div className="absolute top-0 z-10 flex h-20 w-full justify-center bg-background/50 backdrop-blur-sm">
+      <div className="absolute top-0 z-[2000] flex h-20 w-full justify-center bg-background/50 backdrop-blur-sm">
         <div className="hidden w-full max-w-screen-lg items-center justify-between gap-4 px-8 sm:flex">
           {routes.map((route) => (
             <NavItem
