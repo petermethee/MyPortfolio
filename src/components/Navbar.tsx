@@ -90,7 +90,7 @@ export default function Navbar() {
           </Button>
         </div>
       </div>
-      <Drawer open={open} onClose={() => setOpen(false)}>
+      <Drawer sx={{ zIndex: 2001 }} open={open} onClose={() => setOpen(false)}>
         <div className="flex flex-col gap-4 py-8 pl-2 pr-14">
           {routes.map((route) => (
             <NavItem
