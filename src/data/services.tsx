@@ -50,7 +50,7 @@ export const services: TServiceCard[] = [
     icon: <StorageRoundedIcon />,
   },
   {
-    title: "Autre",
+    title: "Autres",
     items: [
       {
         icon: <PhoneAndroidRoundedIcon />,

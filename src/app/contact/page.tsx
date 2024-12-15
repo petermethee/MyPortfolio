@@ -100,7 +100,7 @@ export default function ContactPage() {
       <p className="mx-auto my-8 w-3/4 rounded-lg border-[1px] border-secondary bg-primary_dark/30 p-4 font-josefin text-lg backdrop-blur-sm">
         N'hésitez pas à me contacter pour discuter de vos projets de
         développement. Je serais ravi de mettre mon expertise à votre service et
-        d'explorer ensemble des opportunités de collaboration. Que ce soit pour
+        d'explorer avec vous des opportunités de collaboration. Que ce soit pour
         une mission spécifique ou un partenariat à long terme, je suis à votre
         disposition pour échanger et trouver des solutions adaptées à vos
         besoins.
