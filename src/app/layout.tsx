@@ -29,6 +29,10 @@ export default function RootLayout({
           content="Portfolio de Jérôme Procureur, développeur fullstack."
         />
         <meta property="og:type" content="website" />
+        <meta
+          name="google-site-verification"
+          content="Ognpjtg2bPHpiQNRk0cBbjc7pzNAeG21nC-wq8uRsas"
+        />
         <link rel="icon" href="/portfolio.svg" />
       </head>
       <body
