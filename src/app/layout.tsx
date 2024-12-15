@@ -1,4 +1,5 @@
 import { meriendaFont, standardFont } from "@/helper/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import App from "./App";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <App>{children}</App>
       </body>
+      <SpeedInsights />
     </html>
   );
 }
