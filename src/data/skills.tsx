@@ -48,7 +48,7 @@ export const skills: TSkill[] = [
           },
           {
             name: "Angular",
-            level: 4,
+            level: 3,
           },
           {
             name: "NextJS",
@@ -86,11 +86,11 @@ export const skills: TSkill[] = [
           },
           {
             name: "C#",
-            level: 4,
+            level: 3,
           },
           {
             name: "Java",
-            level: 4,
+            level: 3,
           },
           {
             name: "SQL",
@@ -117,7 +117,7 @@ export const skills: TSkill[] = [
           },
           {
             name: "Postgres",
-            level: 4,
+            level: 3,
           },
           {
             name: "SQLite",
@@ -142,7 +142,7 @@ export const skills: TSkill[] = [
           },
           {
             name: "React Native",
-            level: 3,
+            level: 2,
           },
         ],
       },
